@@ -5405,7 +5405,7 @@ blockquote.pull-right {
 .card-header {
     padding: 10px 15px;
     margin-top: 0;
-    border-bottom: 1px solid #f2f3f4
+    /* border-bottom: 1px solid #f2f3f4 */
 }
 
 .card-header-link,
