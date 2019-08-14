@@ -79,7 +79,8 @@
     </style>
 </head>
 
-<body>
+<body class="p-5">
+        <div id="top"></div>
     <!-- begin #page-loader -->
     <div id="page-loader" class="fade show"><span class="spinner"></span></div>
     <!-- end #page-loader -->
@@ -201,7 +202,6 @@
             <!-- end header navigation right -->
         </div>
         <!-- end #header -->
-
         <!-- begin #sidebar -->
         <div id="sidebar" class="sidebar">
             <!-- begin sidebar scrollbar -->
@@ -241,6 +241,17 @@
                         <ul class="sub-menu">
                             <li><a href="index.html">Dashboard v1</a></li>
                             <li><a href="index_v2.html">Dashboard v2</a></li>
+                        </ul>
+                    </li>
+                     <li class="has-sub">
+                        <a href="javascript:;">
+                            <b class="caret"></b>
+                            <i class="fa fa-th-large"></i>
+                            <span>Page Nav</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li><a href="#top">Video Lectures</a></li>
+                            <li><a href="#problem">Solved Problems</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
@@ -539,7 +550,6 @@
         </div>
         <div class="sidebar-bg"></div>
         <!-- end #sidebar -->
-
         <!-- begin #content -->
         <div id="content" class="content">
             <!-- begin breadcrumb -->
@@ -552,9 +562,12 @@
             <!-- begin row -->
             <div class="row">
                 <!-- begin col-6 -->
-                <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3">
+                <div class="w-100 h-50">
                     <h4 style="margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
-                        class="text-center text-light p-3">NM | P05. NLM, Friction and Circular Motion Dynamics</h4>
+                        class="text-center text-light p-3">NM | P05. NLM, Friction and Circular Motion Dynamics 
+                        <a href="#problem"><i class="fa fa-caret-down ml-5" style="cursor: hand"></i></a>
+                        
+                    </h4>
                     <!-- begin panel -->
                     <div class="panel panel-inverse">
                         <!-- begin panel-heading -->
@@ -599,7 +612,7 @@
                 </div>
                 <!-- end col-6 -->
                 <!-- begin col-6 -->
-                <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3">
+                <div class="w-100">
                     <!-- begin panel -->
                     <div class="panel panel-inverse" data-sortable-id="ui-media-object-2">
                         <!-- begin panel-heading -->
@@ -645,7 +658,7 @@
             <!-- begin row -->
             <div class="row">
                 <!-- begin col-6 -->
-                <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3">
+                <div class="w-100">
                     <!-- begin panel -->
                     <div class="panel panel-inverse" data-sortable-id="ui-media-object-3">
                         <!-- begin panel-heading -->
@@ -679,7 +692,7 @@
                                 <!-- </a> -->
 
                             </div>
-
+                            <div id="problem"></div>
                         </div>
                         <!-- end panel-body -->
                     </div>
@@ -693,600 +706,105 @@
             <!-- end row -->
         </div>
         <!-- end #content -->
-        <div id="content" class="content">
-            <!-- begin breadcrumb -->
-
-            <!-- end breadcrumb -->
-            <!-- begin page-header -->
-            <!-- <h1 class="page-header" style="text-align: center;background:linear-gradient(90deg, rgba(9,5,73,1) 0%, rgba(20,94,161,1) 40%, rgba(0,212,255,1) 100%);">Photon Ecademy</h1> -->
-            <!-- end page-header -->
-
-            <!-- begin row -->
-            <div class="row row-centered " style="text-align: center !important">
-                <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3" style="text-align: center !important">
-                    <h4 style="margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
-                        class="text-center text-light p-3">Photon Ecademy | Guided Problems' Practice</h4>
-                    <!-- begin #accordion -->
-                    <div id="accordion" class="card-accordion">
-                        <!-- begin card -->
-                        <div class="card">
-                            <div class="card-header bg-black text-white pointer-cursor" data-toggle="collapse"
-                                data-target="#collapseOne">
-                                <p
-                                    style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                    <i class="fas fa-desktop" style="    margin-left: 1%;
-									font-size: 82% !important;
-								"></i>
-                                    <span style=" margin-left: 2%;">
-                                        Practice Question 1
-                                    </span>
-
-                                </p>
-                                <img src="src/47.png" alt="Smiley face" width="100%" height="auto">
-                            </div>
-                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                                <div class="card-body">
-                                    <img src="src/photo_2019-06-03_18-46-09.jpg" alt="Smiley face" width="100%"
-                                        height="auto">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-
-                                            <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                                controls width="100%" height="auto" preload="auto"
-                                                controlsList="nodownload" data-setup='{ "asdf": true }'
-                                                poster="thumbnail.png"
-                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                                <source
-                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                    type="video/mp4">
-
-                                            </video>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                        <!-- begin card -->
-                        <div class="card">
-                            <div class="card-header bg-black text-white pointer-cursor collapsed" data-toggle="collapse"
-                                data-target="#collapseTwo">
-                                <p
-                                    style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                    <i class="fas fa-desktop" style="    margin-left: 1%;
-									font-size: 82% !important;
-								"></i>
-                                    <span style="margin-left: 2%;">
-                                        Practice Question 2
-                                    </span>
-
-                                </p>
-                                <img src="src/44.png" alt="Smiley face" width="100%" height="auto">
-                            </div>
-                            <div id="collapseTwo" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <img src="src/photo_2019-06-03_18-46-09.jpg" alt="Smiley face" width="100%"
-                                        height="auto">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                                controls width="100%" height="auto" preload="auto"
-                                                controlsList="nodownload" data-setup='{ "asdf": true }'
-                                                poster="thumbnail.png"
-                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                                <source
-                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                    type="video/mp4">
-
-                                            </video>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                        <!-- begin card -->
-                        <div class="card">
-                            <div class="card-header bg-black text-white pointer-cursor collapsed" data-toggle="collapse"
-                                data-target="#collapseThree">
-                                <p
-                                    style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                    <i class="fas fa-desktop" style="    margin-left: 1%;
-									font-size: 82% !important;
-								"></i>
-                                    <span style="margin-left: 2%;">
-                                        Practice Question 3
-                                    </span>
-
-                                </p>
-                                <img src="src/46.png" alt="Smiley face" width="100%" height="auto">
-                            </div>
-                            <div id="collapseThree" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <img src="src/photo_2019-06-03_18-46-09.jpg" alt="Smiley face" width="100%"
-                                        height="auto">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                                controls width="100%" height="auto" preload="auto"
-                                                controlsList="nodownload" data-setup='{ "asdf": true }'
-                                                poster="thumbnail.png"
-                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                                <source
-                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                    type="video/mp4">
-
-                                            </video>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                        <!-- begin card -->
-                        <div class="card">
-                            <div class="card-header bg-black text-white pointer-cursor collapsed" data-toggle="collapse"
-                                data-target="#collapseFour">
-                                <p
-                                    style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                    <i class="fas fa-desktop" style="    margin-left: 1%;
-									font-size: 82% !important;
-								"></i>
-                                    <span style="margin-left: 2%;">
-                                        Practice Question 4
-                                    </span>
-
-                                </p>
-                                <img src="src/45.png" alt="Smiley face" width="100%" height="auto">
-                            </div>
-                            <div id="collapseFour" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <img src="src/photo_2019-06-03_18-46-09.jpg" alt="Smiley face" width="100%"
-                                        height="auto">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-
-                                            <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                                controls width="100%" height="auto" preload="auto"
-                                                controlsList="nodownload" data-setup='{ "asdf": true }'
-                                                poster="thumbnail.png"
-                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                                <source
-                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                    type="video/mp4">
-
-                                            </video>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                        <!-- begin card -->
-                        <div class="card">
-                            <div class="card-header bg-black text-white pointer-cursor collapsed" data-toggle="collapse"
-                                data-target="#collapseFive">
-                                <p
-                                    style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                    <i class="fas fa-desktop" style="    margin-left: 1%;
-									font-size: 82% !important;
-								"></i>
-                                    <span style="margin-left: 2%;">
-                                        Practice Question 5
-                                    </span>
-
-                                </p>
-                                <img src="src/48.png" alt="Smiley face" width="100%" height="auto">
-                            </div>
-                            <div id="collapseFive" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <img src="photo_2019-06-03_18-46-09.jpg" alt="Smiley face" width="100%"
-                                        height="auto">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-                                            <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                                controls width="100%" height="auto" preload="auto"
-                                                controlsList="nodownload" data-setup='{ "asdf": true }'
-                                                poster="thumbnail.png"
-                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                                <source
-                                                    src="src/https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                    type="video/mp4">
-
-                                            </video>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                        <!-- begin card -->
-                        <div class="card">
-                            <div class="card-header bg-black text-white pointer-cursor collapsed" data-toggle="collapse"
-                                data-target="#collapseSix">
-                                <p
-                                    style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                    <i class="fas fa-desktop" style="    margin-left: 1%;
-									font-size: 82% !important;
-								"></i>
-                                    <span style="margin-left: 2%;">
-                                        Practice Question 6
-                                    </span>
-
-                                </p>
-                                <img src="src/49.png" alt="Smiley face" width="100%" height="auto">
-                            </div>
-                            <div id="collapseSix" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <img src="src/photo_2019-06-03_18-46-09.jpg" alt="Smiley face" width="100%"
-                                        height="auto">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-
-                                            <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                                controls width="100%" height="auto" preload="auto"
-                                                controlsList="nodownload" data-setup='{ "asdf": true }'
-                                                poster="thumbnail.png"
-                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                                <source
-                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                    type="video/mp4">
-
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                        <!-- begin card -->
-                        <div class="card">
-                            <div class="card-header bg-black text-white pointer-cursor collapsed" data-toggle="collapse"
-                                data-target="#collapseSeven">
-                                <p
-                                    style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                    <i class="fas fa-desktop" style="    margin-left: 1%;
-									font-size: 82% !important;
-								"></i>
-                                    <span style="margin-left: 2%;">
-                                        Practice Question 7
-                                    </span>
-
-                                </p>
-                                <img src="src/50.png" alt="Smiley face" width="100%" height="auto">
-                            </div>
-                            <div id="collapseSeven" class="collapse" data-parent="#accordion">
-                                <div class="card-body">
-                                    <img src="src/photo_2019-06-03_18-46-09.jpg" alt="Smiley face" width="100%"
-                                        height="auto">
-                                    <div class="container">
-                                        <div class="row justify-content-center">
-
-                                            <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                                controls width="100%" height="auto" preload="auto"
-                                                controlsList="nodownload" data-setup='{ "asdf": true }'
-                                                poster="thumbnail.png"
-                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                                <source
-                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                    type="video/mp4">
-
-                                            </video>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end #accordion -->
-                </div>
-                <!-- end col-6 -->
-            </div>
-            <!-- end row -->
-
-            <!-- New Row -->
-            <div class="row row-centered pt-3" style="text-align: center !important;background: white;background-size: cover;">
-                <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3" style="text-align: center !important">
-                    <!-- begin card -->
-                    <div class="card">
-                        <div class="card-header text-white pointer-cursor collapsed" data-toggle="collapse"
-                            data-target="#collapse8">
-                            <p
-                                style="background: linear-gradient(to right , blue, rgb(0, 191, 255),green);position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                <i class="fas fa-desktop" style="    margin-left: 1%;
-                                font-size: 82% !important;
-                            "></i>
-                                <span style="margin-left: 2%;">
-                                    Practice Question 8
-                                </span>
-
-                            </p>
-                            <img src="src/140.PNG" alt="Smiley face" width="100%" height="auto">
-                        </div>
-                        <div id="collapse8" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                <img src="src/s.145.PNG" alt="Smiley face" width="100%"
-                                    height="auto">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-
-                                        <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                            controls width="100%" height="auto" preload="auto"
-                                            controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            poster="thumbnail.png"
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
-
-                                        </video>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- begin card -->
-                    <div class="card">
-                        <div class="card-header text-white pointer-cursor collapsed" data-toggle="collapse"
-                            data-target="#collapse9">
-                            <p
-                                style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                <i class="fas fa-desktop" style="    margin-left: 1%;
-                                font-size: 82% !important;
-                            "></i>
-                                <span style="margin-left: 2%;">
-                                    Practice Question 9
-                                </span>
-
-                            </p>
-                            <img src="src/141.PNG" alt="Smiley face" width="100%" height="auto">
-                        </div>
-                        <div id="collapse9" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                <img src="src/s.146.PNG" alt="Smiley face" width="100%"
-                                    height="auto">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-
-                                        <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                            controls width="100%" height="auto" preload="auto"
-                                            controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            poster="thumbnail.png"
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
-
-                                        </video>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- begin card -->
-                    <div class="card">
-                        <div class="card-header text-white pointer-cursor collapsed" data-toggle="collapse"
-                            data-target="#collapse10">
-                            <p
-                                style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                <i class="fas fa-desktop" style="    margin-left: 1%;
-                                font-size: 82% !important;
-                            "></i>
-                                <span style="margin-left: 2%;">
-                                    Practice Question 10
-                                </span>
-
-                            </p>
-                            <img src="src/142.PNG" alt="Smiley face" width="100%" height="auto">
-                        </div>
-                        <div id="collapse10" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                <img src="src/s.147.PNG" alt="Smiley face" width="100%"
-                                    height="auto">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-
-                                        <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                            controls width="100%" height="auto" preload="auto"
-                                            controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            poster="thumbnail.png"
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
-
-                                        </video>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                    <!-- begin card -->
-                    <div class="card">
-                        <div class="card-header text-white pointer-cursor collapsed" data-toggle="collapse"
-                            data-target="#collapse11">
-                            <p
-                                style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;position: relative; height: 1.8em !important;line-height: 1.78;text-align: left;">
-                                <i class="fas fa-desktop" style="    margin-left: 1%;
-                                font-size: 82% !important;
-                            "></i>
-                                <span style="margin-left: 2%;">
-                                    Practice Question 11
-                                </span>
-
-                            </p>
-                            <img src="src/143.PNG" alt="Smiley face" width="100%" height="auto">
-                        </div>
-                        <div id="collapse11" class="collapse" data-parent="#accordion">
-                            <div class="card-body">
-                                <img src="src/s.148.PNG" alt="Smiley face" width="100%"
-                                    height="auto">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-
-                                        <video id="my_video_1" class="video-js" data-setup='{"fluid": true}'
-                                            controls width="100%" height="auto" preload="auto"
-                                            controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            poster="thumbnail.png"
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
-
-                                        </video>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end card -->
-                </div>
-            </div>
-            <!-- end New Row -->
-            <!-- New Row -->
-            <div class="row row-centered pt-3 mt-4" style="text-align: center !important;background: white;background-size: cover;">
-                <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3" style="text-align: center !important">
-                    <!-- begin panel -->
-                     <div class="panel panel-inverse">
-                        <!-- begin panel-heading -->
-                        <div class="panel-heading">
-                            <div class="panel-heading-btn">
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
-                                    data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
-                                    data-click="panel-reload"><i class="fa fa-redo"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
-                                    data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
-                                    data-click="panel-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                            <h4 class="panel-title">Default Media Object</h4>
-                        </div>
-                        <!-- end panel-heading -->
-                        <!-- begin panel-body -->
-                        <div class="panel-body">
-                            <div class="media media-sm" style="display: flex">
-                                <!-- <a class="media-left" href="javascript:;"> -->
-                                    <img src="src/140.PNG" alt="Smiley face" width="100%" height="auto">
-                                <!-- </a> -->
-                            </div>
-                        </div>
-                        <!-- end panel-body -->
-                    </div>
-                    <!-- end panel -->
-                     <!-- begin panel -->
-                     <div class="panel panel-inverse">
-                        <!-- begin panel-heading -->
-                        <div class="panel-heading">
-                            <div class="panel-heading-btn">
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
-                                    data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
-                                    data-click="panel-reload"><i class="fa fa-redo"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
-                                    data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
-                                    data-click="panel-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                            <h4 class="panel-title">Default Media Object</h4>
-                        </div>
-                        <!-- end panel-heading -->
-                        <!-- begin panel-body -->
-                        <div class="panel-body">
-                            <div class="media media-sm" style="display: flex">
-                                <!-- <a class="media-left" href="javascript:;"> -->
-                                    <img src="src/s.145.PNG" alt="Smiley face" width="100%" height="auto">
-                                <!-- </a> -->
-                            </div>
-                        </div>
-                        <!-- end panel-body -->
-                    </div>
-                    <!-- end panel -->
-                </div>
-            </div>
-            <!-- end New Row -->
-
-            <!-- New Row -->
+        <div class="content" id="content">
             <div class="row row-centered pt-3 mt-4" style="text-align: center !important;background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;">
-                <div class="col-lg-6 col-md-6 offset-lg-3 offset-md-3" style="text-align: center !important">
-                    <div id="accordion">
-                        <div class="card">
-                          <div class="card-header bg-dark" id="headingOne"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;">
+            <div class="w-100" style="text-align: center !important;float: right;padding: 2vw;">
+                <div id="accordion">
+                    <div class="card">
+                      <div class="card-header bg-dark" id="headingOne"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;">
+                        <h5 class="mb-0 text-light">
+                            Question #1
+                        </h5>
+                      </div>
+                      <div id="collapseOne" class="collapse p-5" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body" style="padding: 1vh !important;">
+                          <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
+                          <div style=" background-image: url(assets/img/5-min.png);background-size: cover;" class="card-header bg-dark mt-4" id="heading1Ans"  data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1Ans">
                             <h5 class="mb-0 text-light">
-                                Question #1
+                                Answer #1
                             </h5>
                           </div>
-                          <div id="collapseOne" class="collapse p-5" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body" style="padding: 1vh !important;">
-                              <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
-                              <div style=" background-image: url(assets/img/5-min.png);background-size: cover;" class="card-header bg-dark mt-4" id="heading1Ans"  data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1Ans">
-                                <h5 class="mb-0 text-light">
-                                    Answer #1
-                                </h5>
-                              </div>
-                              <div class="collapse p-5 mt-4" id="collapse1" aria-labelledby="heading1Ans">
-                                  <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
-                                  <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                                  controls width="100%" height="auto" preload="auto"
-                                  controlsList="nodownload" data-setup='{ "asdf": true }'
-                                  poster="thumbnail.png"
-                                  data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                  <source
-                                      src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                      type="video/mp4">
+                          <div class="collapse p-5 mt-4" id="collapse1" aria-labelledby="heading1Ans">
+                              <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                              <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
+                              controls width="100%" height="auto" preload="auto"
+                              controlsList="nodownload" data-setup='{ "asdf": true }'
+                              poster="thumbnail.png"
+                              data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                              <source
+                                  src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                  type="video/mp4">
 
-                              </video>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Collapsible Group Item #2
-                              </button>
-                            </h5>
-                          </div>
-                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Collapsible Group Item #3
-                              </button>
-                            </h5>
-                          </div>
-                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
+                          </video>
                           </div>
                         </div>
                       </div>
-                </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo"  data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2" style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;">
+                        <h5 class="mb-0 text-light">
+                            Question #2
+                        </h5>
+                      </div>
+                      <div id="collapse2" class="collapse p-5" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body bg-black" style="padding: 1vh !important;">
+                          <img class="" src="src/45.png" alt="" srcset="" style="width: 87%">
+                          <div style=" background-image: url(assets/img/5-min.png);background-size: cover;" class="card-header bg-dark mt-4" id="heading2Ans"  data-toggle="collapse" data-target="#collapse2Ans" aria-expanded="true" aria-controls="collapse2Ans">
+                            <h5 class="mb-0 text-light">
+                                Answer #2
+                            </h5>
+                          </div>
+                          <div class="collapse p-5 mt-4" id="collapse2Ans" aria-labelledby="heading2Ans">
+                              <img class="" src="src/a2.jpg" alt="" srcset="" style="width: 87%">
+                              <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
+                              controls width="100%" height="auto" preload="auto"
+                              controlsList="nodownload" data-setup='{ "asdf": true }'
+                              poster="thumbnail.png"
+                              data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                              <source
+                                  src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                  type="video/mp4">
+
+                          </video>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card bg-dark">
+                      <div class="card-header" id="headingThree"  data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3" style="background-color: #1a2229!important;">
+                        <h5 class="mb-0 text-light">
+                            Question #3
+                        </h5>
+                      </div>
+                      <div id="collapse3" class="collapse p-5" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body bg-dark" style="padding: 1vh !important;">
+                          <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
+                          <div style=" background-image: url(assets/img/5-min.png);background-size: cover;" class="card-header bg-dark mt-4" id="heading3Ans"  data-toggle="collapse" data-target="#collapse3Ans" aria-expanded="true" aria-controls="collapse3Ans">
+                            <h5 class="mb-0 text-light">
+                                Answer #2
+                            </h5>
+                          </div>
+                          <div class="collapse p-5 mt-4" id="collapse3Ans" aria-labelledby="heading3Ans">
+                              <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
+                              <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
+                              controls width="100%" height="auto" preload="auto"
+                              controlsList="nodownload" data-setup='{ "asdf": true }'
+                              poster="thumbnail.png"
+                              data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                              <source
+                                  src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                  type="video/mp4">
+
+                          </video>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
-
-
+        </div>
+        </div>
+        
         <!-- begin theme-panel -->
         <div class="theme-panel theme-panel-lg">
             <a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i
