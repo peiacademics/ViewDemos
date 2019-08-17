@@ -8,7 +8,8 @@
     <meta charset="utf-8" />
     <title>Color Admin | Media Object</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-    <meta name="viewport" content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes"/>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=.5, maximum-scale=12.0, minimum-scale=.25, user-scalable=yes" />
     <meta content="" name="description" />
     <meta content="" name="author" />
 
@@ -21,6 +22,7 @@
     <link href="assets/css/default/style.min.css" rel="stylesheet" />
     <link href="assets/css/default/style-responsive.min.css" rel="stylesheet" />
     <link href="assets/css/default/theme/default.css" rel="stylesheet" id="theme" />
+    <link rel="stylesheet" href="assets/plugins/bootstrap-select/bootstrap-select.css">
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
@@ -35,15 +37,23 @@
         body {
             background: url(src/rm21-wood-ae-52-p.jpg)
         }
-        .section-title{
+
+        .section-title {
             padding: 10px 15px;
         }
-        .panel-body {
-            padding: 0 !important
-        }
-        img{
+
+        img {
             pointer-events: none;
+            margin: 0 auto;
+            /* border: 1px solid red; */
         }
+        .card-header{
+            border-radius: 1.2vw;
+        }
+        #accordion1 img {
+            width: 100% !important;
+        }
+
         .video-js .vjs-big-play-button {
             top: 50% !important;
             left: 50% !important;
@@ -81,11 +91,20 @@
         .bg-inverse {
             background-color: #1f2429 !important;
         }
+
+        .sectionbtn {
+            color: white;
+        }
+
+        .sectionbtn:hover {
+            background: #00acac !important;
+            color: white;
+        }
     </style>
 </head>
 
 <body class="p-5">
-        <div id="top"></div>
+    <div id="top"></div>
     <!-- begin #page-loader -->
     <div id="page-loader" class="fade show"><span class="spinner"></span></div>
     <!-- end #page-loader -->
@@ -244,20 +263,20 @@
                             <span>Dashboard</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href="index.html">Dashboard v1</a></li>
-                            <li><a href="index_v2.html">Dashboard v2</a></li>
+                            <li><a href="index.html">Learn Page</a></li>
+                            <li><a href="theoryPage.html">Theory Page</a></li>
+                            <li><a href="assignPage.html">Assignment Page</a></li>
                         </ul>
                     </li>
-                     <li class="has-sub">
+                    <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret"></b>
                             <i class="fa fa-th-large"></i>
                             <span>Page Nav</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href="#top">Video Lectures</a></li>
-                            <li><a href="#problem">Solved Problems</a></li>
-                            <li><a href="theoryPage.html">Theory Page</a></li>
+                            <li><a href="#top">Sec.1</a></li>
+                            <li><a href="#problem">Sec.2</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
@@ -557,7 +576,7 @@
         <div class="sidebar-bg"></div>
         <!-- end #sidebar -->
         <!-- begin #content -->
-        <div id="content" class="content">
+        <div id="content pb-0 mb-0" class="content">
             <!-- begin breadcrumb -->
 
             <!-- end breadcrumb -->
@@ -567,53 +586,94 @@
 
             <!-- begin row -->
             <div class="row">
-                <!-- begin col-6 -->
+                <!-- begin col-3 -->
                 <div class="w-100">
-                    <h4 style="font-size:1.3vw;margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
-                        class="text-center text-light section-title">NM | P05. NLM, Friction and Circular Motion Dynamics 
-                        <a class="float-right" href="#problem" style="width: 2vw;background: black;"><i class="fa fa-caret-down" style="cursor: pointer;color:white;"></i></a>
-                    </h4>
-                    <!-- begin panel -->
-                    <div class="panel panel-inverse">
-                        <!-- begin panel-heading -->
-                        <div class="panel-heading">
-                            <div class="panel-heading-btn">
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
-                                    data-click="panel-expand"><i class="fa fa-expand"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
-                                    data-click="panel-reload"><i class="fa fa-redo"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
-                                    data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
-                                    data-click="panel-remove"><i class="fa fa-times"></i></a>
-                            </div>
-                            <h4 class="panel-title">Default Media Object</h4>
+                    <div class="widget widget-stats bg-blue pr-2">
+                        <div class="stats-icon"><i class="fa fa-desktop"></i></div>
+                        <div class="stats-info">
+                            <h4>Learn Theory:</h4>
+                            <p>NM | P05. NLM, Friction and Circular Motion Dynamics</p>
                         </div>
-                        <!-- end panel-heading -->
-                        <!-- begin panel-body -->
-                        <div class="panel-body">
-                            <div class="media media-sm" style="display: flex">
-                                <!-- <a class="media-left" href="javascript:;"> -->
-                                <video id="my_video_1" class="video-js" data-setup='{"fluid": true}' controls
-                                    width="100%" height="auto" preload="auto" controlsList="nodownload"
-                                    data-setup='{ "asdf": true }' poster="thumbnail.png"
-                                    data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                    <source
-                                        src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                        type="video/mp4">
-
-                                </video>
-
-
-
-                                <!-- </a> -->
-
-                            </div>
-
+                        <div class="stats-link">
+                            <a href="javascript:;" style="overflow: auto;">
+                                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                    <label class="btn btn-xs mr-2 sectionbtn" style="background: rgb(9, 10, 78);">
+                                        <input type="radio" name="options" id="option2" /> Previous Section
+                                    </label>
+                                    <label class="btn btn-xs sectionbtn" style="background: rgb(9, 10, 78);">
+                                        <input type="radio" name="options" id="option1" />Next Section
+                                    </label>
+                                </div>
+                            </a>
                         </div>
-                        <!-- end panel-body -->
                     </div>
-                    <!-- end panel -->
+                </div>
+                <!-- end col-3 -->
+                <!-- begin col-3 -->
+                <!-- <div class="col-xl-3 col-md-6">
+					<div class="widget widget-stats bg-info">
+						<div class="stats-icon"><i class="fa fa-link"></i></div>
+						<div class="stats-info">
+							<h4>BOUNCE RATE</h4>
+							<p>20.44%</p>	
+						</div>
+						<div class="stats-link">
+							<a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+						</div>
+					</div>
+				</div> -->
+                <!-- end col-3 -->
+                <!-- begin col-3 -->
+                <!-- <div class="col-xl-3 col-md-6">
+					<div class="widget widget-stats bg-orange">
+						<div class="stats-icon"><i class="fa fa-users"></i></div>
+						<div class="stats-info">
+							<h4>UNIQUE VISITORS</h4>
+							<p>1,291,922</p>	
+						</div>
+						<div class="stats-link">
+							<a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+						</div>
+					</div>
+				</div> -->
+                <!-- end col-3 -->
+                <!-- begin col-3 -->
+                <!-- <div class="col-xl-3 col-md-6">
+					<div class="widget widget-stats bg-red">
+						<div class="stats-icon"><i class="fa fa-clock"></i></div>
+						<div class="stats-info">
+							<h4>AVG TIME ON SITE</h4>
+							<p>00:12:23</p>	
+						</div>
+						<div class="stats-link">
+							<a href="javascript:;">View Detail <i class="fa fa-arrow-alt-circle-right"></i></a>
+						</div>
+					</div>
+				</div> -->
+                <!-- end col-3 -->
+            </div>
+            <div class="row">
+                <!-- begin col-6 -->
+                <!-- <div class="panel panel-inverse w-100">
+                    <div class="panel-heading">
+                        <h4 class="panel-title d-inline">NM | P05. NLM, Friction and Circular Motion Dynamics</h4>
+                        <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                            <label class="btn btn-success btn-xs ">
+                                <input type="radio" name="options" id="option1" checked />Next
+                            </label>
+                            <label class="btn btn-success btn-xs">
+                                <input type="radio" name="options" id="option2" /> Previous
+                            </label>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="w-100 mb-3">
+                    <select class="selectpicker w-100 show-tick" data-live-search="true" title="Select Section"
+                        data-style="bg-black">
+                        <option style="font-size: 1.2vw !important;">Section 1 Electro-magnetism</option>
+                        <option style="font-size: 1.2vw !important;">Section 2 Electro-magnetic Induction</option>
+                        <option style="font-size: 1.2vw !important;">Section 3 Electro-magnetic Waves</option>
+                    </select>
                 </div>
                 <!-- end col-6 -->
                 <!-- begin col-6 -->
@@ -636,12 +696,12 @@
                         </div>
                         <!-- end panel-heading -->
                         <!-- begin panel-body -->
-                        <div class="panel-body">
+                        <div class="panel-body p-0">
                             <div class="media media-sm" style="display: flex">
                                 <!-- <a class="media-left" href="javascript:;"> -->
                                 <video id="my_video_1" class="video-js" data-setup='{"fluid": true}' controls
                                     width="100%" height="auto" preload="auto" controlsList="nodownload"
-                                    data-setup='{ "asdf": true }' poster="thumbnail.png"
+                                    data-setup='{ "asdf": true }'
                                     data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
                                     <source
                                         src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
@@ -682,12 +742,12 @@
                         </div>
                         <!-- end panel-heading -->
                         <!-- begin panel-body -->
-                        <div class="panel-body">
+                        <div class="panel-body p-0">
                             <div class="media media-sm" style="display: flex">
                                 <!-- <a class="media-left" href="javascript:;"> -->
                                 <video id="my_video_1" class="video-js" data-setup='{"fluid": true}' controls
                                     width="100%" height="auto" preload="auto" controlsList="nodownload"
-                                    data-setup='{ "asdf": true }' poster="thumbnail.png"
+                                    data-setup='{ "asdf": true }'
                                     data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
                                     <source
                                         src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
@@ -711,274 +771,394 @@
             <!-- end row -->
         </div>
         <!-- end #content -->
-        <div class="content" id="content">
-             <h4 style="font-size:1.3vw;margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
-                    class="text-center text-light section-title" >Photon Ecademy | Guided Problems' Practice
-                    <a class="float-right" href="#top" style="width: 2vw;background: black;"><i class="fa fa-caret-up" style="cursor: pointer;color:white;"></i></a>
-                    <a class="float-right mr-2" href="#next" style="width: 2vw;background: black;"><i class="fa fa-caret-down " style="cursor: pointer;color:white;"></i></a>
-                </h4>
-            <div class="row row-centered pt-3 mt-4 bg-black" style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
-            <div class="w-100" style="float: right;padding: 2vw;">
-                <div id="accordion">
-                    <div class="card">
-                      <div class="card-header bg-dark" id="headingOne"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;">
-                        <h5 class="mb-0 text-light">
-                            Question #1
-                        </h5>
-                      </div>
-                      <div id="collapseOne" class="collapse p-5" aria-labelledby="headingOne" data-parent="#accordion">
-                        <div class="card-body" style="padding: 1vh !important;">
-                          <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
-                          <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;" class="card-header bg-dark mt-4" id="heading1Ans"  data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1Ans">
-                            <h5 class="mb-0 text-light">
-                                Answer #1
-                            </h5>
-                          </div>
-                          <div class="collapse p-5 mt-4" id="collapse1" aria-labelledby="heading1Ans">
-                              <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
-                              <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                              controls width="100%" height="auto" preload="auto"
-                              controlsList="nodownload" data-setup='{ "asdf": true }'
-                              poster="thumbnail.png"
-                              data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                              <source
-                                  src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                  type="video/mp4">
-
-                          </video>
-                          </div>
+        <div class="content pt-0 mt-0" id="content">
+            <!-- <h4 style="font-size:1.3vw;margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
+                class=" text-light section-title">Photon Ecademy | Guided Problems' Practice
+                <a class="text-center float-right" href="#top" style="width: 2vw;background: black;"><i
+                        class="fa fa-caret-up" style="cursor: pointer;color:white;"></i></a>
+                <a class="text-center float-right mr-2" href="#next" style="width: 2vw;background: black;"><i
+                        class="fa fa-caret-down " style="cursor: pointer;color:white;"></i></a>
+            </h4> -->
+            <div class="widget widget-stats bg-blue pr-2">
+                <div class="stats-icon"><i class="fa fa-desktop"></i></div>
+                <div class="stats-info">
+                    <h4>Learn Theory:</h4>
+                    <p>NM | P05. NLM, Friction and Circular Motion Dynamics</p>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;" style="overflow: auto;">
+                        <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                            <label class="btn btn-xs mr-2 sectionbtn" style="background: rgb(9, 10, 78);">
+                                <input type="radio" name="options" id="option2" /> Previous Section
+                            </label>
+                            <label class="btn btn-xs sectionbtn" style="background: rgb(9, 10, 78);">
+                                <input type="radio" name="options" id="option1" />Next Section
+                            </label>
                         </div>
-                      </div>
-                    </div>
-                    <div class="card">
-                      <div class="card-header" id="headingTwo"  data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2" style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                        <h5 class="mb-0 text-left text-light">
-                            Question #2
-                        </h5>
-                      </div>
-                      <div id="collapse2" class="collapse p-5" aria-labelledby="headingTwo" data-parent="#accordion" style="background: black;">
-                        <div class="card-body" style="padding: 1vh !important;">
-                          <img class="" src="src/45.png" alt="" srcset="" style="width: 97%;">
-                          <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( -112.2deg,  rgba(0,204,255,1) -1.1%, rgba(0,221,61,1) 100.7% );" class="card-header bg-dark mt-4" id="heading2Ans"  data-toggle="collapse" data-target="#collapse2Ans" aria-expanded="true" aria-controls="collapse2Ans">
-                            <h5 class="mb-0 text-light">
-                                Answer #2
-                            </h5>
-                          </div>
-                          <div class="collapse p-5 mt-4" id="collapse2Ans" aria-labelledby="heading2Ans">
-                              <img class="" src="src/a2.png" alt="" srcset="" style="width: 87%">
-                              <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                              controls width="100%" height="auto" preload="auto"
-                              controlsList="nodownload" data-setup='{ "asdf": true }'
-                              poster="thumbnail.png"
-                              data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                              <source
-                                  src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                  type="video/mp4">
-
-                          </video>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card bg-dark">
-                      <div class="card-header" id="headingThree"  data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3" style="background-color: #1a2229!important;">
-                        <h5 class="mb-0 text-light">
-                            Question #3
-                        </h5>
-                      </div>
-                      <div id="collapse3" class="collapse p-5" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body bg-dark" style="padding: 1vh !important;">
-                          <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
-                          <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;" class="card-header mt-4" id="heading3Ans"  data-toggle="collapse" data-target="#collapse3Ans" aria-expanded="true" aria-controls="collapse3Ans">
-                            <h5 class="mb-0 text-light">
-                                Answer #3
-                            </h5>
-                          </div>
-                          <div class="collapse p-5 mt-4" id="collapse3Ans" aria-labelledby="heading3Ans">
-                              <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
-                              <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                              controls width="100%" height="auto" preload="auto"
-                              controlsList="nodownload" data-setup='{ "asdf": true }'
-                              poster="thumbnail.png"
-                              data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                              <source
-                                  src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                  type="video/mp4">
-
-                          </video>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card bg-dark">
-                            <div class="card-header" id="headingFour"  data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4" style="background-color: #1a2229!important;">
-                              <h5 class="mb-0 text-light">
-                                  Question #4
-                              </h5>
+                    </a>
+                </div>
+            </div>
+            <div class="row row-centered pt-3 mt-4 bg-black"
+                style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
+                <div class="w-100" style="float: right;padding: 2vw;">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header bg-dark" id="headingOne" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                style="background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;">
+                                <h5 class="mb-0 text-light">
+                                    Question #1
+                                </h5>
                             </div>
-                            <div id="collapse4" class="collapse p-5" aria-labelledby="headingFour" data-parent="#accordion">
-                              <div class="card-body bg-dark" style="padding: 1vh !important;">
-                                <img class="" src="src/140.png" alt="" srcset="" style="width: 87%">
-                                <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;" class="card-header mt-4" id="heading3Ans"  data-toggle="collapse" data-target="#collapse3Ans" aria-expanded="true" aria-controls="collapse3Ans">
-                                  <h5 class="mb-0 text-light">
-                                      Answer #4
-                                  </h5>
+                            <div id="collapseOne" class="collapse p-5" aria-labelledby="headingOne"
+                                data-parent="#accordion">
+                                <div class="card-body" style="padding: 1vh !important;">
+                                    <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
+                                    <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;"
+                                        class="card-header bg-dark mt-4" id="heading1Ans" data-toggle="collapse"
+                                        data-target="#collapse1" aria-expanded="true" aria-controls="collapse1Ans">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #1
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collapse1" aria-labelledby="heading1Ans">
+                                        <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
                                 </div>
-                                <div class="collapse p-5 mt-4" id="collapse3Ans" aria-labelledby="heading3Ans">
-                                    <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
-                                    <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                                    controls width="100%" height="auto" preload="auto"
-                                    controlsList="nodownload" data-setup='{ "asdf": true }'
-                                    poster="thumbnail.png"
-                                    data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                    <source
-                                        src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                        type="video/mp4">
-      
-                                </video>
-                                </div>
-                              </div>
                             </div>
-                          </div>
-                  </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapse2"
+                                aria-expanded="true" aria-controls="collapse2"
+                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                <h5 class="mb-0 text-left text-light">
+                                    Question #2
+                                </h5>
+                            </div>
+                            <div id="collapse2" class="collapse p-5" aria-labelledby="headingTwo"
+                                data-parent="#accordion" style="background: black;">
+                                <div class="card-body" style="padding: 1vh !important;">
+                                    <img class="" src="src/45.png" alt="" srcset="" style="width: 97%;">
+                                    <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( -112.2deg,  rgba(0,204,255,1) -1.1%, rgba(0,221,61,1) 100.7% );"
+                                        class="card-header bg-dark mt-4" id="heading2Ans" data-toggle="collapse"
+                                        data-target="#collapse2Ans" aria-expanded="true" aria-controls="collapse2Ans">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #2
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collapse2Ans" aria-labelledby="heading2Ans">
+                                        <img class="" src="src/a2.png" alt="" srcset="" style="width: 87%">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-dark">
+                            <div class="card-header" id="headingThree" data-toggle="collapse" data-target="#collapse3"
+                                aria-expanded="true" aria-controls="collapse3"
+                                style="background-color: #1a2229!important;">
+                                <h5 class="mb-0 text-light">
+                                    Question #3
+                                </h5>
+                            </div>
+                            <div id="collapse3" class="collapse p-5" aria-labelledby="headingThree"
+                                data-parent="#accordion">
+                                <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                    <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
+                                    <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;"
+                                        class="card-header mt-4" id="heading3Ans" data-toggle="collapse"
+                                        data-target="#collapse3Ans" aria-expanded="true" aria-controls="collapse3Ans">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #3
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collapse3Ans" aria-labelledby="heading3Ans">
+                                        <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-dark">
+                            <div class="card-header" id="headingFour" data-toggle="collapse" data-target="#collapse4"
+                                aria-expanded="true" aria-controls="collapse4"
+                                style="background-color: #1a2229!important;">
+                                <h5 class="mb-0 text-light">
+                                    Question #4
+                                </h5>
+                            </div>
+                            <div id="collapse4" class="collapse p-5" aria-labelledby="headingFour"
+                                data-parent="#accordion">
+                                <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                    <img class="" src="src/140.png" alt="" srcset="" style="width: 87%">
+                                    <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;"
+                                        class="card-header mt-4" id="heading3Ans" data-toggle="collapse"
+                                        data-target="#collapse3Ans" aria-expanded="true" aria-controls="collapse3Ans">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #4
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collapse3Ans" aria-labelledby="heading3Ans">
+                                        <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        </div>
-        
+
         <div class="content" id="content">
-                <h4 style="font-size:1.3vw;margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
-                       class="text-center text-light section-title" >Photon Ecademy | Guided Problems' Practice
-                       <a class="float-right" href="#top" style="width: 2vw;background: black;"><i class="fa fa-caret-up" style="cursor: pointer;color:white;"></i></a>
-                       <a class="float-right mr-2" href="#next" style="width: 2vw;background: black;"><i class="fa fa-caret-down " style="cursor: pointer;color:white;"></i></a>
-                       
-                   </h4>
-               <div class="row row-centered pt-3 mt-4" style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
-               <div class="w-100" style="float: right;padding: 2vw;">
-                   <div id="accordion1">
-                       <div class="card">
-                         <div class="card-header bg-dark" id="headingOne1"  data-toggle="collapse" data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1" style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                           <h5 class="mb-0 text-light">
-                               Question #5
-                           </h5>
-                         </div>
-                         <div id="collapseOne1" class="collapse p-5" aria-labelledby="headingOne1" data-parent="#accordion1">
-                           <div class="card-body" style="padding: 1vh !important;">
-                             <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
-                             <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );" class="card-header bg-dark mt-4" id="heading1Ans1"  data-toggle="collapse" data-target="#collaps1e1" aria-expanded="true" aria-controls="collapse1Ans1">
-                               <h5 class="mb-0 text-light">
-                                   Answer #5
-                               </h5>
-                             </div>
-                             <div class="collapse p-5 mt-4" id="collaps1e1" aria-labelledby="heading1Ans1">
-                                 <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
-                                 <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                                 controls width="100%" height="auto" preload="auto"
-                                 controlsList="nodownload" data-setup='{ "asdf": true }'
-                                 poster="thumbnail.png"
-                                 data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                 <source
-                                     src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                     type="video/mp4">
-   
-                             </video>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                       <div class="card" style="background: black;">
-                         <div class="card-header" id="headingTwo1"  data-toggle="collapse" data-target="#collaps1e2" aria-expanded="true" aria-controls="collaps1e2" style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                           <h5 class="mb-0 text-left text-light">
-                               Question #6
-                           </h5>
-                         </div>
-                         <div id="collaps1e2" class="collapse p-5" aria-labelledby="headingTwo1" data-parent="#accordion1" style="background: black;">
-                           <div class="card-body" style="padding: 1vh !important;">
-                             <img class="" src="src/45.png" alt="" srcset="" style="width: 97%;">
-                             <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );" class="card-header bg-dark mt-4" id="heading2Ans1"  data-toggle="collapse" data-target="#collapse2Ans1" aria-expanded="true" aria-controls="collapse2Ans1">
-                               <h5 class="mb-0 text-light">
-                                   Answer #6
-                               </h5>
-                             </div>
-                             <div class="collapse p-5 mt-4" id="collapse2Ans1" aria-labelledby="heading2Ans1">
-                                 <img class="" src="src/a2.png" alt="" srcset="" style="width: 87%">
-                                 <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                                 controls width="100%" height="auto" preload="auto"
-                                 controlsList="nodownload" data-setup='{ "asdf": true }'
-                                 poster="thumbnail.png"
-                                 data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                 <source
-                                     src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                     type="video/mp4">
-   
-                             </video>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                       <div class="card bg-dark">
-                         <div class="card-header" id="headingThree1"  data-toggle="collapse" data-target="#collaps1e3" aria-expanded="true" aria-controls="collaps1e3" style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                           <h5 class="mb-0 text-light">
-                               Question #7
-                           </h5>
-                         </div>
-                         <div id="collaps1e3" class="collapse p-5" aria-labelledby="headingThree1" data-parent="#accordion1">
-                           <div class="card-body bg-dark" style="padding: 1vh !important;">
-                             <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
-                             <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );" class="card-header mt-4" id="heading3Ans1"  data-toggle="collapse" data-target="#collapse3Ans1" aria-expanded="true" aria-controls="collapse3Ans1">
-                               <h5 class="mb-0 text-light">
-                                   Answer #7
-                               </h5>
-                             </div>
-                             <div class="collapse p-5 mt-4" id="collapse3Ans1" aria-labelledby="heading3Ans1">
-                                 <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
-                                 <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                                 controls width="100%" height="auto" preload="auto"
-                                 controlsList="nodownload" data-setup='{ "asdf": true }'
-                                 poster="thumbnail.png"
-                                 data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                 <source
-                                     src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                     type="video/mp4">
-   
-                             </video>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                       <div class="card bg-dark">
-                               <div class="card-header" id="headingFour1"  data-toggle="collapse" data-target="#collaps1e4" aria-expanded="true" aria-controls="collaps1e4" style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                                 <h5 class="mb-0 text-light">
-                                     Question #8
-                                 </h5>
-                               </div>
-                               <div id="collaps1e4" class="collapse p-5" aria-labelledby="headingFour1" data-parent="#accordion1">
-                                 <div class="card-body bg-dark" style="padding: 1vh !important;">
-                                   <img class="" src="src/140.png" alt="" srcset="" style="width: 87%">
-                                   <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );" class="card-header mt-4" id="heading3Ans1"  data-toggle="collapse" data-target="#collapse3Ans1" aria-expanded="true" aria-controls="collapse3Ans1">
-                                     <h5 class="mb-0 text-light">
-                                         Answer #8
-                                     </h5>
-                                   </div>
-                                   <div class="collapse p-5 mt-4" id="collapse3Ans1" aria-labelledby="heading3Ans1">
-                                       <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
-                                       <video style="width: 93%;margin:0 auto;" id="my_video_1" class="video-js mt-4" data-setup='{"fluid": true}'
-                                       controls width="100%" height="auto" preload="auto"
-                                       controlsList="nodownload" data-setup='{ "asdf": true }'
-                                       poster="thumbnail.png"
-                                       data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                       <source
-                                           src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                           type="video/mp4">
-         
-                                   </video>
-                                   </div>
-                                 </div>
-                               </div>
-                             </div>
-                     </div>
-               </div>
-           </div>
-           </div>
+            <!-- <h4 style="font-size:1.3vw;margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
+                class=" text-light section-title">Photon Ecademy | Guided Problems' Practice
+                <a class="float-right text-center" href="#top" style="width: 2vw;background: black;"><i
+                        class="fa fa-caret-up" style="cursor: pointer;color:white;"></i></a>
+                <a class="float-right text-center mr-2" href="#next" style="width: 2vw;background: black;"><i
+                        class="fa fa-caret-down " style="cursor: pointer;color:white;"></i></a>
+            </h4>
+
+            <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="panel-heading-btn">
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
+                                data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
+                                data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
+                                data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                            <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
+                                data-click="panel-remove"><i class="fa fa-times"></i></a>
+                        </div>
+                        <h4 class="panel-title">Photon Ecademy | Guided Problems' Practice</h4>
+                    </div>
+                    <div class="panel-body p-5 bg-primary text-light">
+                        <div class="w-100">
+                                <select class="selectpicker w-100 show-tick" data-live-search="true" title="Select Section"
+                                    data-style="bg-black">
+                                    <option style="font-size: 1.2vw !important;">Section 1 Electro-magnetism</option>
+                                    <option style="font-size: 1.2vw !important;">Section 2 Electro-magnetic Induction</option>
+                                    <option style="font-size: 1.2vw !important;">Section 3 Electro-magnetic Waves</option>
+                                </select>
+                            </div>
+                    </div>
+                </div>
+                <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="panel-heading-btn">
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default"
+                                    data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success"
+                                    data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning"
+                                    data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger"
+                                    data-click="panel-remove"><i class="fa fa-times"></i></a>
+                            </div>
+                            <h4 class="panel-title">Default Media Object</h4>
+                        </div>
+                        <div class="panel-body p-20 bg-success text-light">
+                            Hiii This is Demo Text.
+                        </div>
+                </div> -->
+            <div class="widget widget-stats bg-blue pr-2">
+                <div class="stats-icon"><i class="fa fa-desktop"></i></div>
+                <div class="stats-info">
+                    <h4>Learn Theory:</h4>
+                    <p>NM | P05. NLM, Friction and Circular Motion Dynamics</p>
+                </div>
+                <div class="stats-link">
+                    <a href="javascript:;" style="overflow: auto;">
+                        <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                            <label class="btn btn-xs mr-2 sectionbtn" style="background: rgb(9, 10, 78);">
+                                <input type="radio" name="options" id="option2" /> Previous Section
+                            </label>
+                            <label class="btn btn-xs sectionbtn" style="background: rgb(9, 10, 78);">
+                                <input type="radio" name="options" id="option1" />Next Section
+                            </label>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row row-centered pt-3 mt-4"
+                style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
+                <div class="w-100" style="float: right;padding: 2vw;">
+                    <div id="accordion1">
+                        <div class="card">
+                            <div class="card-header bg-dark" id="headingOne1" data-toggle="collapse"
+                                data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"
+                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                <h5 class="mb-0 text-light">
+                                    Question #5
+                                </h5>
+                            </div>
+                            <div id="collapseOne1" class="collapse p-5" aria-labelledby="headingOne1"
+                                data-parent="#accordion1">
+                                <div class="card-body" style="padding: 1vh !important;">
+                                    <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
+                                    <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                        class="card-header bg-dark mt-4" id="heading1Ans1" data-toggle="collapse"
+                                        data-target="#collaps1e1" aria-expanded="true" aria-controls="collapse1Ans1">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #5
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collaps1e1" aria-labelledby="heading1Ans1">
+                                        <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" style="background: black;">
+                            <div class="card-header" id="headingTwo1" data-toggle="collapse" data-target="#collaps1e2"
+                                aria-expanded="true" aria-controls="collaps1e2"
+                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                <h5 class="mb-0 text-left text-light">
+                                    Question #6
+                                </h5>
+                            </div>
+                            <div id="collaps1e2" class="collapse p-5" aria-labelledby="headingTwo1"
+                                data-parent="#accordion1" style="background: black;">
+                                <div class="card-body" style="padding: 1vh !important;">
+                                    <img class="" src="src/45.png" alt="" srcset="" style="width: 97%;">
+                                    <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                        class="card-header bg-dark mt-4" id="heading2Ans1" data-toggle="collapse"
+                                        data-target="#collapse2Ans1" aria-expanded="true" aria-controls="collapse2Ans1">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #6
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collapse2Ans1" aria-labelledby="heading2Ans1">
+                                        <img class="" src="src/50.png" alt="" srcset=""
+                                            style="width: 100%;margin: 0 auto;">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4" poster="src/thumbnail.png"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-dark">
+                            <div class="card-header" id="headingThree1" data-toggle="collapse" data-target="#collaps1e3"
+                                aria-expanded="true" aria-controls="collaps1e3"
+                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                <h5 class="mb-0 text-light">
+                                    Question #7
+                                </h5>
+                            </div>
+                            <div id="collaps1e3" class="collapse p-5" aria-labelledby="headingThree1"
+                                data-parent="#accordion1">
+                                <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                    <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
+                                    <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                        class="card-header mt-4" id="heading3Ans1" data-toggle="collapse"
+                                        data-target="#collapse3Ans1" aria-expanded="true" aria-controls="collapse3Ans1">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #7
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collapse3Ans1" aria-labelledby="heading3Ans1">
+                                        <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-dark">
+                            <div class="card-header" id="headingFour1" data-toggle="collapse" data-target="#collaps1e4"
+                                aria-expanded="true" aria-controls="collaps1e4"
+                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                <h5 class="mb-0 text-light">
+                                    Question #8
+                                </h5>
+                            </div>
+                            <div id="collaps1e4" class="collapse p-5" aria-labelledby="headingFour1"
+                                data-parent="#accordion1">
+                                <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                    <img class="" src="src/140.png" alt="" srcset="" style="width: 87%">
+                                    <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                        class="card-header mt-4" id="heading3Ans1" data-toggle="collapse"
+                                        data-target="#collapse3Ans1" aria-expanded="true" aria-controls="collapse3Ans1">
+                                        <h5 class="mb-0 text-light">
+                                            Answer #8
+                                        </h5>
+                                    </div>
+                                    <div class="collapse p-5 mt-4" id="collapse3Ans1" aria-labelledby="heading3Ans1">
+                                        <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
+                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                            <source
+                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                type="video/mp4">
+
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- begin theme-panel -->
         <div class="theme-panel theme-panel-lg">
             <a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i
@@ -1154,6 +1334,7 @@
     <script src="assets/js/theme/default.min.js"></script>
     <script src="assets/js/apps.min.js"></script>
     <script src="assets/js/disable.js"></script>
+    <script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script>
     <!-- ================== END BASE JS ================== -->
 
     <script>

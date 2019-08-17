@@ -201,8 +201,10 @@ select.selectpicker {
 .bootstrap-select[class*="col-"] .dropdown-toggle {
   width: 100%;
 }
+/* dropdown-menu background color */
 .bootstrap-select .dropdown-menu {
   min-width: 100%;
+  background: black;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -292,8 +294,13 @@ select.selectpicker {
   right: 15px;
   top: 5px;
 }
+/* dropdown-menu font color */
 .bootstrap-select.show-tick .dropdown-menu li a span.text {
   margin-right: 34px;
+  color: white;
+}
+.bootstrap-select.show-tick .dropdown-menu li a span.text:hover{
+  color:black;
 }
 .bootstrap-select .bs-ok-default:after {
   content: '';
