@@ -23,6 +23,7 @@
     <link href="assets/css/default/style-responsive.min.css" rel="stylesheet" />
     <link href="assets/css/default/theme/default.css" rel="stylesheet" id="theme" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-select/bootstrap-select.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
@@ -115,12 +116,14 @@
         <div id="header" class="header navbar-default">
             <!-- begin navbar-header -->
             <div class="navbar-header">
-                <a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> <b>Color</b> Admin</a>
+                <a href="index.html" class="navbar-brand bg-primary">
+                    <img src="assets/img/logo/photon logo.png" alt="" srcset="">
+                </a>
                 <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
             </div>
             <!-- end navbar-header -->
 
@@ -588,7 +591,7 @@
             <div class="row">
                 <!-- begin col-3 -->
                 <div class="w-100">
-                    <div class="widget widget-stats bg-blue pr-2">
+                    <div class="widget widget-stats pr-2">
                         <div class="stats-icon"><i class="fa fa-desktop"></i></div>
                         <div class="stats-info">
                             <h4>Learn Theory:</h4>
@@ -779,7 +782,7 @@
                 <a class="text-center float-right mr-2" href="#next" style="width: 2vw;background: black;"><i
                         class="fa fa-caret-down " style="cursor: pointer;color:white;"></i></a>
             </h4> -->
-            <div class="widget widget-stats bg-blue pr-2">
+            <div class="widget widget-stats pr-2">
                 <div class="stats-icon"><i class="fa fa-desktop"></i></div>
                 <div class="stats-info">
                     <h4>Learn Theory:</h4>
@@ -995,7 +998,7 @@
                             Hiii This is Demo Text.
                         </div>
                 </div> -->
-            <div class="widget widget-stats bg-blue pr-2">
+            <div class="widget widget-stats pr-2">
                 <div class="stats-icon"><i class="fa fa-desktop"></i></div>
                 <div class="stats-info">
                     <h4>Learn Theory:</h4>
@@ -1018,7 +1021,7 @@
                 style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
                 <div class="w-100" style="float: right;padding: 2vw;">
                     <div id="accordion1">
-                        <div class="card">
+                        <div class="card bg-black">
                             <div class="card-header bg-dark" id="headingOne1" data-toggle="collapse"
                                 data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"
                                 style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
@@ -1029,7 +1032,7 @@
                             <div id="collapseOne1" class="collapse p-5" aria-labelledby="headingOne1"
                                 data-parent="#accordion1">
                                 <div class="card-body" style="padding: 1vh !important;">
-                                    <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
+                                    <img class="qimgs" src="src/q1-black.png" alt="" srcset="" style="width: 87%">
                                     <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
                                         class="card-header bg-dark mt-4" id="heading1Ans1" data-toggle="collapse"
                                         data-target="#collaps1e1" aria-expanded="true" aria-controls="collapse1Ans1">
@@ -1280,28 +1283,14 @@
                     </div>
                 </div>
                 <div class="divider"></div>
-                <h5>THEME VERSION</h5>
-                <div class="theme-version">
-                    <a href="template_html/index_v2.html" class="active">
-                        <span style="background-image: url(assets/img/theme/default.jpg);"></span>
-                    </a>
-                    <a href="template_transparent/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/transparent.jpg);"></span>
-                    </a>
-                </div>
-                <div class="theme-version">
-                    <a href="template_apple/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/apple.jpg);"></span>
-                    </a>
-                    <a href="template_material/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/material.jpg);"></span>
-                    </a>
-                </div>
-                <div class="theme-version">
-                    <a href="template_facebook/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/facebook.jpg);"></span>
-                    </a>
-                </div>
+                <style>
+                    .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20rem; }
+                    .toggle.ios .toggle-handle { border-radius: 20rem; }
+                </style>
+                <h5>Reading Mode &nbsp;&nbsp;&nbsp;
+                    <input  id="readingMode" type="checkbox" checked data-toggle="toggle" data-on="Dark" data-off="Light" data-onstyle="dark" data-offstyle="light" data-style="ios">
+                </h5>
+                
                 <div class="divider"></div>
                 <div class="row m-t-10">
                     <div class="col-md-12">
@@ -1335,11 +1324,30 @@
     <script src="assets/js/apps.min.js"></script>
     <script src="assets/js/disable.js"></script>
     <script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
     <!-- ================== END BASE JS ================== -->
 
     <script>
         $(document).ready(function () {
             App.init();
+        });
+    </script>
+    <script>
+        $(function () {
+            src = $(".qimgs").attr("src");
+            // alert(src)
+            $("#readingMode").change(function (e) { 
+                e.preventDefault();
+                if(src.includes("black")){
+                    src = src.replace(/black/g,"white")
+                    $(".qimgs").attr("src",""+src);
+                }
+                else
+                {
+                    src = src.replace(/white/g,"black")
+                    $(".qimgs").attr("src",""+src);
+                }
+            });
         });
     </script>
 </body>

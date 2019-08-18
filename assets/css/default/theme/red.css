@@ -83,3 +83,7 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 .top-menu .nav > li.active > a:hover i {
 	color: #ff5b57;
 }
+/* Custom Addition */
+.widget-stats{
+	background: #ff5b57;
+}
