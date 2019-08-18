@@ -283,8 +283,8 @@
                             <span>Page Nav</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href="#top">Sec.1</a></li>
-                            <li><a href="#problem">Sec.2</a></li>
+                            <li><a href="#top">Section 1</a></li>
+                            <li><a href="#problem">Section 2</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
@@ -341,6 +341,7 @@
             <div class="row">
                 <!-- begin videos -->
                 <div class="w-100">
+
                     <div class="widget widget-stats pr-2">
                         <div class="stats-icon"><i class="fa fa-desktop"></i></div>
                         <div class="stats-info">
@@ -449,7 +450,8 @@
 
 
         <div class="content" id="content">
-            <div class="widget widget-stats pr-2">
+            <div class="row w-100 p-0">
+                <div class="w-100 widget widget-stats pr-2">
                 <div class="stats-icon"><i class="fa fa-desktop"></i></div>
                 <div class="stats-info">
                     <h4>Learn Theory:</h4>
@@ -467,6 +469,7 @@
                         </div>
                     </a>
                 </div>
+            </div>
             </div>
             <div class="row row-centered pt-3 mt-4"
                 style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
@@ -805,6 +808,59 @@
                             data-title="Black">&nbsp;</a></li>
                 </ul>
                 <div class="divider"></div>
+                <h5 class="m-t-0">Background Color</h5>
+                <ul class="theme-list clearfix">
+                    <li><a href="javascript:;" class="bg-red" data-theme="red"
+                            data-theme-file="assets/css/default/theme/red.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a>
+                    </li>
+                    <li><a href="javascript:;" class="bg-pink" data-theme="pink"
+                            data-theme-file="assets/css/default/theme/pink.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Pink">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-orange" data-theme="orange"
+                            data-theme-file="assets/css/default/theme/orange.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Orange">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-yellow" data-theme="yellow"
+                            data-theme-file="assets/css/default/theme/yellow.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Yellow">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-lime" data-theme="lime"
+                            data-theme-file="assets/css/default/theme/lime.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Lime">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-green" data-theme="green"
+                            data-theme-file="assets/css/default/theme/green.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Green">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-teal" data-theme="default"
+                            data-theme-file="assets/css/default/theme/default.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Default">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-aqua" data-theme="aqua"
+                            data-theme-file="assets/css/default/theme/aqua.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Aqua">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-blue" data-theme="blue"
+                            data-theme-file="assets/css/default/theme/blue.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Blue">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-purple" data-theme="purple"
+                            data-theme-file="assets/css/default/theme/purple.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Purple">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-indigo" data-theme="indigo"
+                            data-theme-file="assets/css/default/theme/indigo.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Indigo">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-black" data-theme="black"
+                            data-theme-file="assets/css/default/theme/black.css" data-click="theme-selector"
+                            data-toggle="tooltip" data-trigger="hover" data-container="body"
+                            data-title="Black">&nbsp;</a>
+                    </li>
+                </ul>
+                <div class="divider"></div>
                 <div class="row m-t-10">
                     <div class="col-md-6 control-label text-inverse f-w-600">Header Styling</div>
                     <div class="col-md-6">
@@ -871,7 +927,7 @@
                 <div class="row m-t-10">
                     <div class="col-md-6 control-label text-inverse f-w-600">Page Background</div>
                     <div class="col-md-6">
-                         <select name="pageBg" class="form-control form-control-sm mt-3">
+                        <select name="pageBg" class="form-control form-control-sm mt-3">
                             <option value="0">Default</option>
                             <option value="1">Gray-Wood</option>
                             <option value="2">Maple-Wood</option>
@@ -964,22 +1020,17 @@
                 // alert()
                 val = $(this).val();
                 // alert(val)
-                if(val==1){
+                if (val == 1) {
                     $("body").css("background", "url(assets/img/page-bg/gray-wood.jpg)");
-                }
-                else if(val==2){
+                } else if (val == 2) {
                     $("body").css("background", "url(assets/img/page-bg/maple-wood.jpg)");
-                }
-                else if(val==3){
+                } else if (val == 3) {
                     $("body").css("background", "url(assets/img/page-bg/brown-wood.jpg)");
-                }
-                else if(val==4){
+                } else if (val == 4) {
                     $("body").css("background", "url(assets/img/page-bg/blue-texture.jpg)");
-                }
-                else if(val==5){
+                } else if (val == 5) {
                     $("body").css("background", "url(assets/img/page-bg/gray-texture.jpg)");
-                }
-                else if(val==6){
+                } else if (val == 6) {
                     $("body").css("background", "url(assets/img/page-bg/vertical-wood.jpg)");
                 }
             });
