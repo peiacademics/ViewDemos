@@ -83,3 +83,7 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 .widget-stats{
 	background: #fb5597;
 }
+.sectionbtn:hover {
+	background: #fb5597 !important;
+	color: white;
+}
