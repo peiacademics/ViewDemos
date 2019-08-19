@@ -580,7 +580,7 @@ var handleThemePageStructureControl = function() {
 	$(document).on('change', '.theme-panel [name=sidebar-fixed]', function() {
 		if ($(this).val() == 1) {
 			if ($('.theme-panel [name=header-fixed]').val() == 2) {
-				alert('Default Header with Fixed Sidebar option is not supported. Proceed with Fixed Header with Fixed Sidebar.');
+				// alert('Default Header with Fixed Sidebar option is not supported. Proceed with Fixed Header with Fixed Sidebar.');
 				$('.theme-panel [name=header-fixed] option[value="1"]').prop('selected', true);
 				$('#page-container').addClass('page-header-fixed');
 			}
@@ -622,7 +622,7 @@ var handleThemePageStructureControl = function() {
 			Cookies.set('header-fixed', true);
 		} else {
 			if ($('.theme-panel [name=sidebar-fixed]').val() == 1) {
-				alert('Default Header with Fixed Sidebar option is not supported. Proceed with Default Header with Default Sidebar.');
+				// alert('Default Header with Fixed Sidebar option is not supported. Proceed with Default Header with Default Sidebar.');
 				$('.theme-panel [name=sidebar-fixed] option[value="2"]').prop('selected', true);
 				$('.theme-panel [name=sidebar-fixed]').trigger('change');
 				if ($('#page-container .sidebar-bg').length === 0) {
@@ -733,7 +733,7 @@ var handleLocalStorage = function() {
 				});
 			}
 		} else {
-			alert('Your browser is not supported with the local storage'); 
+			// alert('Your browser is not supported with the local storage'); 
 		}
 	} catch (error) {
 		console.log(error);

@@ -3236,11 +3236,11 @@ a.card-header-link {
     line-height: 1.3333333
 }
 
-.btn,
+/* .btn,
 .btn.btn-sm,
 .btn.btn-xs {
     font-size: .9vw
-}
+} */
 
 .pager li>a:focus,
 .pager li>a:hover,
@@ -9123,6 +9123,24 @@ body .bootstrap-datetimepicker-widget .timepicker-picker table td:first-child {
     border-radius: 28px
 }
 
+/* My PageBG Changes */
+.theme-panel.theme-panel-lg .bgtheme-list>li>a {
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    border-radius: 14px;
+    display: block;
+    transition: all .2s linear;
+    text-decoration: none;
+    list-style: none;
+    /* border:1px solid red; */
+}
+.theme-panel .bgtheme-list>li {
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 3px
+}
+/* end */
 .theme-panel.theme-panel-lg .theme-list>li.active>a:before {
     line-height: 28px
 }

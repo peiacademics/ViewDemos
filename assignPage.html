@@ -23,6 +23,8 @@
     <link href="assets/css/default/style-responsive.min.css" rel="stylesheet" />
     <link href="assets/css/default/theme/default.css" rel="stylesheet" id="theme" />
     <link rel="stylesheet" href="assets/plugins/bootstrap-select/bootstrap-select.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
     <!-- ================== END BASE CSS STYLE ================== -->
 
     <!-- ================== BEGIN BASE JS ================== -->
@@ -34,16 +36,12 @@
     <script src="src/videojs-ie8.min.js"></script>
 
     <style>
-        body {
+        /* body {
             background: url(src/rm21-wood-ae-52-p.jpg)
-        }
+        } */
 
         .section-title {
             padding: 10px 15px;
-        }
-
-        .panel-body {
-            padding: 0 !important
         }
 
         img {
@@ -51,7 +49,12 @@
             margin: 0 auto;
             /* border: 1px solid red; */
         }
-        #accordion1 img{
+
+        .card-header {
+            border-radius: 1.2vw;
+        }
+
+        #accordion1 img {
             width: 100% !important;
         }
 
@@ -92,10 +95,14 @@
         .bg-inverse {
             background-color: #1f2429 !important;
         }
+
+        .sectionbtn {
+            color: white;
+        }
     </style>
 </head>
 
-<body class="p-5">
+<body class="p-5 body">
     <div id="top"></div>
     <!-- begin #page-loader -->
     <div id="page-loader" class="fade show"><span class="spinner"></span></div>
@@ -104,10 +111,12 @@
     <!-- begin #page-container -->
     <div id="page-container" class="fade page-header-fixed page-sidebar-fixed">
         <!-- begin #header -->
-        <div id="header" class="header navbar-default">
+        <div id="header" class="header navbar-inverse">
             <!-- begin navbar-header -->
             <div class="navbar-header">
-                <a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> <b>Color</b> Admin</a>
+                <a href="index.html" class="navbar-brand bg-black p-0">
+                    <img src="assets/img/logo/photon logo.png" alt="" srcset="">
+                </a>
                 <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -219,7 +228,7 @@
         </div>
         <!-- end #header -->
         <!-- begin #sidebar -->
-        <div id="sidebar" class="sidebar" style="width:275px;font-size: .8rem;">
+        <div id="sidebar" class="sidebar">
             <!-- begin sidebar scrollbar -->
             <div data-scrollbar="true" data-height="100%">
                 <!-- begin sidebar user -->
@@ -248,11 +257,17 @@
                 <!-- begin sidebar nav -->
                 <ul class="nav">
                     <li class="nav-header">Navigation</li>
+                    <li class="has-sub active">
+                        <a href="#">
+                            <i class="fa fa-cogs"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
                     <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret"></b>
-                            <i class="fa fa-th-large"></i>
-                            <span>Dashboard</span>
+                            <i class="fa fa-edit"></i>
+                            <span>Learn this Topic</span>
                         </a>
                         <ul class="sub-menu">
                             <li><a href="index.html">Learn Page</a></li>
@@ -263,298 +278,44 @@
                     <li class="has-sub">
                         <a href="javascript:;">
                             <b class="caret"></b>
-                            <i class="fa fa-th-large"></i>
+                            <i class="fa fa-code-branch fa-rotate-90"></i>
+                            <!-- <i class="fa fa-user-circle-o"></i> -->
                             <span>Page Nav</span>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href="#top">Sec.1</a></li>
-                            <li><a href="#problem">Sec.2</a></li>
+                            <li><a href="#top">Section 1</a></li>
+                            <li><a href="#problem">Section 2</a></li>
                         </ul>
                     </li>
                     <li class="has-sub">
-                        <a href="javascript:;">
-                            <span class="badge pull-right">10</span>
-                            <i class="fa fa-hdd"></i>
-                            <span>Email</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="email_inbox.html">Inbox</a></li>
-                            <li><a href="email_compose.html">Compose</a></li>
-                            <li><a href="email_detail.html">Detail</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="widget.html">
-                            <i class="fab fa-simplybuilt"></i>
-                            <span>Widgets <span class="label label-theme m-l-5">NEW</span></span>
-                        </a>
-                    </li>
-                    <li class="has-sub active">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-gem"></i>
-                            <span>UI Elements <span class="label label-theme m-l-5">NEW</span></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="ui_general.html">General <i class="fa fa-paper-plane text-theme m-l-5"></i></a>
-                            </li>
-                            <li><a href="ui_typography.html">Typography</a></li>
-                            <li><a href="ui_tabs_accordions.html">Tabs & Accordions</a></li>
-                            <li><a href="ui_unlimited_tabs.html">Unlimited Nav Tabs</a></li>
-                            <li><a href="ui_modal_notification.html">Modal & Notification <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="ui_widget_boxes.html">Widget Boxes</a></li>
-                            <li class="active"><a href="ui_media_object.html">Media Object</a></li>
-                            <li><a href="ui_buttons.html">Buttons <i class="fa fa-paper-plane text-theme m-l-5"></i></a>
-                            </li>
-                            <li><a href="ui_icons.html">Icons</a></li>
-                            <li><a href="ui_simple_line_icons.html">Simple Line Icons</a></li>
-                            <li><a href="ui_ionicons.html">Ionicons</a></li>
-                            <li><a href="ui_tree.html">Tree View</a></li>
-                            <li><a href="ui_language_bar_icon.html">Language Bar & Icon</a></li>
-                            <li><a href="ui_social_buttons.html">Social Buttons</a></li>
-                            <li><a href="ui_tour.html">Intro JS</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="bootstrap_4.html">
-                            <div class="icon-img">
-                                <img src="assets/img/logo/logo-bs4.png" alt="" />
-                            </div>
-                            <span>Bootstrap 4 <span class="label label-theme m-l-5">NEW</span></span>
+                        <a href="#">
+                            <i class="fas fa-lg fa-fw m-r-10 fa-gem"></i>
+                            <span>PhotonEcademy Courses</span>
                         </a>
                     </li>
                     <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-list-ol"></i>
-                            <span>Form Stuff <span class="label label-theme m-l-5">NEW</span></span>
+                        <a href="#">
+                            <i class="fas fa-lg fa-fw m-r-10 fa-rocket"></i>
+                            <span>Online Tests Portal</span>
                         </a>
-                        <ul class="sub-menu">
-                            <li><a href="form_elements.html">Form Elements <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="form_plugins.html">Form Plugins <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="form_slider_switcher.html">Form Slider + Switcher</a></li>
-                            <li><a href="form_validation.html">Form Validation</a></li>
-                            <li><a href="form_wizards.html">Wizards</a></li>
-                            <li><a href="form_wizards_validation.html">Wizards + Validation</a></li>
-                            <li><a href="form_wysiwyg.html">WYSIWYG</a></li>
-                            <li><a href="form_editable.html">X-Editable</a></li>
-                            <li><a href="form_multiple_upload.html">Multiple File Upload</a></li>
-                            <li><a href="form_summernote.html">Summernote</a></li>
-                            <li><a href="form_dropzone.html">Dropzone</a></li>
-                        </ul>
                     </li>
                     <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-table"></i>
-                            <span>Tables</span>
+                        <a href="#">
+                            <i class="fa fa-briefcase"></i>
+                            <span>My Orders</span>
                         </a>
-                        <ul class="sub-menu">
-                            <li><a href="table_basic.html">Basic Tables</a></li>
-                            <li class="has-sub">
-                                <a href="javascript:;"><b class="caret pull-right"></b> Managed Tables</a>
-                                <ul class="sub-menu">
-                                    <li><a href="table_manage.html">Default</a></li>
-                                    <li><a href="table_manage_autofill.html">Autofill</a></li>
-                                    <li><a href="table_manage_buttons.html">Buttons</a></li>
-                                    <li><a href="table_manage_colreorder.html">ColReorder</a></li>
-                                    <li><a href="table_manage_fixed_columns.html">Fixed Column</a></li>
-                                    <li><a href="table_manage_fixed_header.html">Fixed Header</a></li>
-                                    <li><a href="table_manage_keytable.html">KeyTable</a></li>
-                                    <li><a href="table_manage_responsive.html">Responsive</a></li>
-                                    <li><a href="table_manage_rowreorder.html">RowReorder</a></li>
-                                    <li><a href="table_manage_scroller.html">Scroller</a></li>
-                                    <li><a href="table_manage_select.html">Select</a></li>
-                                    <li><a href="table_manage_combine.html">Extension Combination</a></li>
-                                </ul>
-                            </li>
-                        </ul>
                     </li>
                     <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-star"></i>
-                            <span>Front End</span>
+                        <a href="#">
+                            <i class="far fa-lg fa-fw m-r-10 fa-user-circle"></i>
+                            <span>Update Profile</span>
                         </a>
-                        <ul class="sub-menu">
-                            <li><a href="../../../frontend/template/template_one_page_parallax/index.html"
-                                    target="_blank">One Page Parallax</a></li>
-                            <li><a href="../../../frontend/template/template_blog/index.html" target="_blank">Blog</a>
-                            </li>
-                            <li><a href="../../../frontend/template/template_forum/index.html" target="_blank">Forum</a>
-                            </li>
-                            <li><a href="../../../frontend/template/template_e_commerce/index.html"
-                                    target="_blank">E-Commerce</a></li>
-                        </ul>
                     </li>
                     <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-envelope"></i>
-                            <span>Email Template</span>
+                        <a href="#">
+                            <i class="fas fa-lg fa-fw m-r-10 fa-sign-out-alt"></i>
+                            <span>Sign Out</span>
                         </a>
-                        <ul class="sub-menu">
-                            <li><a href="email_system.html">System Template</a></li>
-                            <li><a href="email_newsletter.html">Newsletter Template</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-chart-pie"></i>
-                            <span>Chart</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="chart-flot.html">Flot Chart</a></li>
-                            <li><a href="chart-morris.html">Morris Chart</a></li>
-                            <li><a href="chart-js.html">Chart JS</a></li>
-                            <li><a href="chart-d3.html">d3 Chart</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a></li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-map"></i>
-                            <span>Map</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="map_vector.html">Vector Map</a></li>
-                            <li><a href="map_google.html">Google Map</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-image"></i>
-                            <span>Gallery</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="gallery.html">Gallery v1</a></li>
-                            <li><a href="gallery_v2.html">Gallery v2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-cogs"></i>
-                            <span>Page Options</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="page_blank.html">Blank Page</a></li>
-                            <li><a href="page_with_footer.html">Page with Footer</a></li>
-                            <li><a href="page_without_sidebar.html">Page without Sidebar</a></li>
-                            <li><a href="page_with_right_sidebar.html">Page with Right Sidebar</a></li>
-                            <li><a href="page_with_minified_sidebar.html">Page with Minified Sidebar</a></li>
-                            <li><a href="page_with_two_sidebar.html">Page with Two Sidebar</a></li>
-                            <li><a href="page_with_line_icons.html">Page with Line Icons</a></li>
-                            <li><a href="page_with_ionicons.html">Page with Ionicons</a></li>
-                            <li><a href="page_full_height.html">Full Height Content</a></li>
-                            <li><a href="page_with_wide_sidebar.html">Page with Wide Sidebar</a></li>
-                            <li><a href="page_with_light_sidebar.html">Page with Light Sidebar</a></li>
-                            <li><a href="page_with_mega_menu.html">Page with Mega Menu</a></li>
-                            <li><a href="page_with_top_menu.html">Page with Top Menu</a></li>
-                            <li><a href="page_with_boxed_layout.html">Page with Boxed Layout</a></li>
-                            <li><a href="page_with_mixed_menu.html">Page with Mixed Menu</a></li>
-                            <li><a href="page_boxed_layout_with_mixed_menu.html">Boxed Layout with Mixed Menu</a></li>
-                            <li><a href="page_with_transparent_sidebar.html">Page with Transparent Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-gift"></i>
-                            <span>Extra</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="extra_timeline.html">Timeline</a></li>
-                            <li><a href="extra_coming_soon.html">Coming Soon Page</a></li>
-                            <li><a href="extra_search_results.html">Search Results</a></li>
-                            <li><a href="extra_invoice.html">Invoice</a></li>
-                            <li><a href="extra_404_error.html">404 Error Page</a></li>
-                            <li><a href="extra_profile.html">Profile Page</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-key"></i>
-                            <span>Login & Register</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="login_v2.html">Login v2</a></li>
-                            <li><a href="login_v3.html">Login v3</a></li>
-                            <li><a href="register_v3.html">Register v3</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-cubes"></i>
-                            <span>Version <span class="label label-theme m-l-5">NEW</span></span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="javascript:;">HTML</a></li>
-                            <li><a href="template_ajax/index.html">AJAX</a></li>
-                            <li><a href="template_angularjs/index.html">ANGULAR JS</a></li>
-                            <li><a href="template_angularjs6/index.html">ANGULAR JS 6 <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="template_laravel/index.html">LARAVEL <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="template_vuejs/index.html">VUE JS <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="template_reactjs/index.html">REACT JS <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="template_material/index.html">MATERIAL DESIGN</a></li>
-                            <li><a href="template_apple/index.html">APPLE DESIGN</a></li>
-                            <li><a href="template_transparent/index.html">TRANSPARENT DESIGN <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                            <li><a href="template_facebook/index.html">FACEBOOK DESIGN <i
-                                        class="fa fa-paper-plane text-theme m-l-5"></i></a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-medkit"></i>
-                            <span>Helper</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li><a href="helper_css.html">Predefined CSS Classes</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-sub">
-                        <a href="javascript:;">
-                            <b class="caret"></b>
-                            <i class="fa fa-align-left"></i>
-                            <span>Menu Level</span>
-                        </a>
-                        <ul class="sub-menu">
-                            <li class="has-sub">
-                                <a href="javascript:;">
-                                    <b class="caret"></b> Menu 1.1
-                                </a>
-                                <ul class="sub-menu">
-                                    <li class="has-sub">
-                                        <a href="javascript:;">
-                                            <b class="caret"></b> Menu 2.1
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li><a href="javascript:;">Menu 3.1</a></li>
-                                            <li><a href="javascript:;">Menu 3.2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="javascript:;">Menu 2.2</a></li>
-                                    <li><a href="javascript:;">Menu 2.3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="javascript:;">Menu 1.2</a></li>
-                            <li><a href="javascript:;">Menu 1.3</a></li>
-                        </ul>
                     </li>
                     <!-- begin sidebar minify button -->
                     <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i
@@ -567,160 +328,340 @@
         </div>
         <div class="sidebar-bg"></div>
         <!-- end #sidebar -->
+        <!-- begin #content -->
+        <div id="content" class="content">
+            <!-- begin row -->
+            <div class="row">
+                <!-- begin videos -->
+                <div class="w-100">
+                    <div class="widget widget-stats pr-2">
+                        <div class="stats-icon"><i class="fa fa-desktop"></i></div>
+                        <div class="stats-info">
+                            <h4>Learn Theory:</h4>
+                            <p>NM | P05. NLM, Friction and Circular Motion Dynamics</p>
+                        </div>
+                        <div class="stats-link">
+                            <a href="javascript:;" style="overflow: auto;">
+                                <div class="btn-group btn-group-toggle float-right" data-toggle="buttons">
+                                    <label class="btn  mr-2 sectionbtn prevbtn" style="background: rgb(0, 0, 0);">
+                                        <input type="radio" name="options" id="option2" /> Previous Section
+                                    </label>
+                                    <label class="btn  sectionbtn nextbtn" style="background: rgb(0, 0, 0);">
+                                        <input type="radio" name="options" id="option1" />Next Section
+                                    </label>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100">
+                    <!-- begin panel -->
+                    <div class="pt-3 mt-4 w-100"
+                    style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
+                    <div class="w-100" style="padding: 2vw;">
+                        <div id="accordion1">
+                            <div class="card bg-black">
+                                <div class="card-header bg-dark" id="headingOne1" data-toggle="collapse"
+                                    data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-light">
+                                        Question #1
+                                    </h5>
+                                </div>
+                                <div id="collapseOne1" class="collapse p-5" aria-labelledby="headingOne1"
+                                    data-parent="#accordion1">
+                                    <div class="card-body" style="padding: 1vh !important;">
+                                        <img class="qimgs" src="src/q1-black.png" alt="" srcset="" style="width: 87%">
+                                        <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header bg-dark mt-4" id="heading1Ans1" data-toggle="collapse"
+                                            data-target="#collaps1e1" aria-expanded="true"
+                                            aria-controls="collapse1Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #1
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collaps1e1" aria-labelledby="heading1Ans1">
+                                            <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" data-setup='{"fluid": true}' controls width="100%"
+                                                height="auto" preload="auto" controlsList="nodownload"
+                                                data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
 
-        <div class="content" id="content" style="margin-left:280px;font-size: .9rem;">
-            <h4 style="font-size:1.3vw;margin-bottom: 4% !important;background: linear-gradient(90deg, rgba(29,22,128,1) 0%, rgba(18,123,219,1) 52%, rgba(0,212,255,1) 100%);border-radius: .2vw;"
-                class=" text-light section-title">Photon Ecademy | Guided Problems' Practice
-                <a class="float-right text-center" href="#top" style="width: 2vw;background: black;"><i
-                        class="fa fa-caret-up" style="cursor: pointer;color:white;"></i></a>
-                <a class="float-right text-center mr-2" href="#next" style="width: 2vw;background: black;"><i
-                        class="fa fa-caret-down " style="cursor: pointer;color:white;"></i></a>
-
-            </h4>
-            <div class="row row-centered pt-3 mt-4"
-                style="/*background-image: url(assets/img/bannerBg-6.jpg);background-size: cover;background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(69,86,102,1) 0%, rgba(34,34,34,1) 90% );*/background: black;border-radius: 1vw;">
-                <div class="w-100" style="float: right;padding: 2vw;">
-                    <div id="accordion1">
-                        <div class="card">
-                            <div class="card-header bg-dark" id="headingOne1" data-toggle="collapse"
-                                data-target="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1"
-                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                                <h5 class="mb-0 text-light">
-                                    Question #5
-                                </h5>
-                            </div>
-                            <div id="collapseOne1" class="collapse p-5" aria-labelledby="headingOne1"
-                                data-parent="#accordion1">
-                                <div class="card-body" style="padding: 1vh !important;">
-                                    <img class="" src="src/140.PNG" alt="" srcset="" style="width: 87%">
-                                    <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
-                                        class="card-header bg-dark mt-4" id="heading1Ans1" data-toggle="collapse"
-                                        data-target="#collaps1e1" aria-expanded="true" aria-controls="collapse1Ans1">
-                                        <h5 class="mb-0 text-light">
-                                            Answer #5
-                                        </h5>
-                                    </div>
-                                    <div class="collapse p-5 mt-4" id="collaps1e1" aria-labelledby="heading1Ans1">
-                                        <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
-                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
-                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
-                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
-
-                                        </video>
+                                            </video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card" style="background: black;">
-                            <div class="card-header" id="headingTwo1" data-toggle="collapse" data-target="#collaps1e2"
-                                aria-expanded="true" aria-controls="collaps1e2"
-                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                                <h5 class="mb-0 text-left text-light">
-                                    Question #6
-                                </h5>
-                            </div>
-                            <div id="collaps1e2" class="collapse p-5" aria-labelledby="headingTwo1"
-                                data-parent="#accordion1" style="background: black;">
-                                <div class="card-body" style="padding: 1vh !important;">
-                                    <img class="" src="src/45.png" alt="" srcset="" style="width: 97%;">
-                                    <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
-                                        class="card-header bg-dark mt-4" id="heading2Ans1" data-toggle="collapse"
-                                        data-target="#collapse2Ans1" aria-expanded="true" aria-controls="collapse2Ans1">
-                                        <h5 class="mb-0 text-light">
-                                            Answer #6
-                                        </h5>
-                                    </div>
-                                    <div class="collapse p-5 mt-4" id="collapse2Ans1" aria-labelledby="heading2Ans1">
-                                        <img class="" src="src/50.png" alt="" srcset=""
-                                            style="width: 100%;margin: 0 auto;">
-                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
-                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
-                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
+                            <div class="card" style="background: black;">
+                                <div class="card-header" id="headingTwo1" data-toggle="collapse"
+                                    data-target="#collaps1e2" aria-expanded="true" aria-controls="collaps1e2"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-left text-light">
+                                        Question #2
+                                    </h5>
+                                </div>
+                                <div id="collaps1e2" class="collapse p-5" aria-labelledby="headingTwo1"
+                                    data-parent="#accordion1" style="background: black;">
+                                    <div class="card-body" style="padding: 1vh !important;">
+                                        <img class="" src="src/45.png" alt="" srcset="" style="width: 97%;">
+                                        <div style=" /*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header bg-dark mt-4" id="heading2Ans1" data-toggle="collapse"
+                                            data-target="#collapse2Ans1" aria-expanded="true"
+                                            aria-controls="collapse2Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #2
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collapse2Ans1"
+                                            aria-labelledby="heading2Ans1">
+                                            <img class="" src="src/50.png" alt="" srcset=""
+                                                style="width: 100%;margin: 0 auto;">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" poster="src/thumbnail.png"
+                                                data-setup='{"fluid": true}' controls width="100%" height="auto"
+                                                preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
 
-                                        </video>
+                                            </video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card bg-dark">
-                            <div class="card-header" id="headingThree1" data-toggle="collapse" data-target="#collaps1e3"
-                                aria-expanded="true" aria-controls="collaps1e3"
-                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                                <h5 class="mb-0 text-light">
-                                    Question #7
-                                </h5>
-                            </div>
-                            <div id="collaps1e3" class="collapse p-5" aria-labelledby="headingThree1"
-                                data-parent="#accordion1">
-                                <div class="card-body bg-dark" style="padding: 1vh !important;">
-                                    <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
-                                    <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
-                                        class="card-header mt-4" id="heading3Ans1" data-toggle="collapse"
-                                        data-target="#collapse3Ans1" aria-expanded="true" aria-controls="collapse3Ans1">
-                                        <h5 class="mb-0 text-light">
-                                            Answer #7
-                                        </h5>
-                                    </div>
-                                    <div class="collapse p-5 mt-4" id="collapse3Ans1" aria-labelledby="heading3Ans1">
-                                        <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
-                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
-                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
-                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
+                            <div class="card bg-dark">
+                                <div class="card-header" id="headingThree1" data-toggle="collapse"
+                                    data-target="#collaps1e3" aria-expanded="true" aria-controls="collaps1e3"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-light">
+                                        Question #3
+                                    </h5>
+                                </div>
+                                <div id="collaps1e3" class="collapse p-5" aria-labelledby="headingThree1"
+                                    data-parent="#accordion1">
+                                    <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                        <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
+                                        <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header mt-4" id="heading3Ans1" data-toggle="collapse"
+                                            data-target="#collapse3Ans1" aria-expanded="true"
+                                            aria-controls="collapse3Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #3
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collapse3Ans1"
+                                            aria-labelledby="heading3Ans1">
+                                            <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" data-setup='{"fluid": true}' controls width="100%"
+                                                height="auto" preload="auto" controlsList="nodownload"
+                                                data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
 
-                                        </video>
+                                            </video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card bg-dark">
-                            <div class="card-header" id="headingFour1" data-toggle="collapse" data-target="#collaps1e4"
-                                aria-expanded="true" aria-controls="collaps1e4"
-                                style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
-                                <h5 class="mb-0 text-light">
-                                    Question #8
-                                </h5>
-                            </div>
-                            <div id="collaps1e4" class="collapse p-5" aria-labelledby="headingFour1"
-                                data-parent="#accordion1">
-                                <div class="card-body bg-dark" style="padding: 1vh !important;">
-                                    <img class="" src="src/140.png" alt="" srcset="" style="width: 87%">
-                                    <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
-                                        class="card-header mt-4" id="heading3Ans1" data-toggle="collapse"
-                                        data-target="#collapse3Ans1" aria-expanded="true" aria-controls="collapse3Ans1">
-                                        <h5 class="mb-0 text-light">
-                                            Answer #8
-                                        </h5>
-                                    </div>
-                                    <div class="collapse p-5 mt-4" id="collapse3Ans1" aria-labelledby="heading3Ans1">
-                                        <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
-                                        <video style="width: 100%;margin:0 auto;" id="my_video_1" class="video-js mt-4"
-                                            data-setup='{"fluid": true}' controls width="100%" height="auto"
-                                            preload="auto" controlsList="nodownload" data-setup='{ "asdf": true }'
-                                            data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
-                                            <source
-                                                src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
-                                                type="video/mp4">
+                            <div class="card bg-dark">
+                                <div class="card-header" id="headingFour1" data-toggle="collapse"
+                                    data-target="#collaps1e4" aria-expanded="true" aria-controls="collaps1e4"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-light">
+                                        Question #4
+                                    </h5>
+                                </div>
+                                <div id="collaps1e4" class="collapse p-5" aria-labelledby="headingFour1"
+                                    data-parent="#accordion1">
+                                    <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                        <img class="" src="src/140.png" alt="" srcset="" style="width: 87%">
+                                        <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header mt-4" id="heading3Ans1" data-toggle="collapse"
+                                            data-target="#collapse3Ans1" aria-expanded="true"
+                                            aria-controls="collapse3Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #4
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collapse3Ans1"
+                                            aria-labelledby="heading3Ans1">
+                                            <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" data-setup='{"fluid": true}' controls width="100%"
+                                                height="auto" preload="auto" controlsList="nodownload"
+                                                data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
 
-                                        </video>
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark">
+                                <div class="card-header" id="heading5" data-toggle="collapse" data-target="#collaps1e5"
+                                    aria-expanded="true" aria-controls="collaps1e5"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-light">
+                                        Question #5
+                                    </h5>
+                                </div>
+                                <div id="collaps1e5" class="collapse p-5" aria-labelledby="heading5"
+                                    data-parent="#accordion1">
+                                    <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                        <img class="" src="src/140.png" alt="" srcset="" style="width: 87%">
+                                        <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header mt-4" id="heading4Ans1" data-toggle="collapse"
+                                            data-target="#collapse4Ans1" aria-expanded="true"
+                                            aria-controls="collapse4Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #5
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collapse4Ans1"
+                                            aria-labelledby="heading4Ans1">
+                                            <img class="" src="src/s.145.PNG" alt="" srcset="" style="width: 87%">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" data-setup='{"fluid": true}' controls width="100%"
+                                                height="auto" preload="auto" controlsList="nodownload"
+                                                data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
+
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark">
+                                <div class="card-header" id="heading6" data-toggle="collapse" data-target="#collaps1e6"
+                                    aria-expanded="true" aria-controls="collaps1e3"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-light">
+                                        Question #6
+                                    </h5>
+                                </div>
+                                <div id="collaps1e6" class="collapse p-5" aria-labelledby="heading6"
+                                    data-parent="#accordion1">
+                                    <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                        <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
+                                        <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header mt-4" id="heading3Ans1" data-toggle="collapse"
+                                            data-target="#collapse6Ans1" aria-expanded="true"
+                                            aria-controls="collapse6Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #6
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collapse6Ans1"
+                                            aria-labelledby="heading6Ans1">
+                                            <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" data-setup='{"fluid": true}' controls width="100%"
+                                                height="auto" preload="auto" controlsList="nodownload"
+                                                data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
+
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark">
+                                <div class="card-header" id="heading7" data-toggle="collapse" data-target="#collaps1e7"
+                                    aria-expanded="true" aria-controls="collaps1e7"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-light">
+                                        Question #7
+                                    </h5>
+                                </div>
+                                <div id="collaps1e7" class="collapse p-5" aria-labelledby="heading7"
+                                    data-parent="#accordion1">
+                                    <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                        <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
+                                        <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header mt-4" id="heading7Ans1" data-toggle="collapse"
+                                            data-target="#collapse7Ans1" aria-expanded="true"
+                                            aria-controls="collapse7Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #7
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collapse7Ans1"
+                                            aria-labelledby="heading7Ans1">
+                                            <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" data-setup='{"fluid": true}' controls width="100%"
+                                                height="auto" preload="auto" controlsList="nodownload"
+                                                data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-dark">
+                                <div class="card-header" id="heading8" data-toggle="collapse" data-target="#collaps1e8"
+                                    aria-expanded="true" aria-controls="collaps1e8"
+                                    style="/*background: url(src/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg) !important;background-size: cover !important;*/background-image: linear-gradient( 108.6deg,  rgba(92,30,249,1) 19%, rgba(14,198,183,1) 91.7% );">
+                                    <h5 class="mb-0 text-light">
+                                        Question #8
+                                    </h5>
+                                </div>
+                                <div id="collaps1e8" class="collapse p-5" aria-labelledby="heading8"
+                                    data-parent="#accordion1">
+                                    <div class="card-body bg-dark" style="padding: 1vh !important;">
+                                        <img class="" src="src/46.png" alt="" srcset="" style="width: 87%">
+                                        <div style="/*background-image: url(assets/img/5-min.png);background-size: cover;*/background: black;/*background-image: url(assets/img/5-min.png);background-size: cover;background: black;*/background-image: linear-gradient( 107deg,  rgba(2,108,223,1) 27.4%, rgba(0,255,255,1) 92.7% );"
+                                            class="card-header mt-4" id="heading8Ans1" data-toggle="collapse"
+                                            data-target="#collapse8Ans1" aria-expanded="true"
+                                            aria-controls="collapse8Ans1">
+                                            <h5 class="mb-0 text-light">
+                                                Answer #8
+                                            </h5>
+                                        </div>
+                                        <div class="collapse p-5 mt-4" id="collapse8Ans1"
+                                            aria-labelledby="heading8Ans1">
+                                            <img class="" src="src/a3.jpg" alt="" srcset="" style="width: 87%">
+                                            <video style="width: 100%;margin:0 auto;" id="my_video_1"
+                                                class="video-js mt-4" data-setup='{"fluid": true}' controls width="100%"
+                                                height="auto" preload="auto" controlsList="nodownload"
+                                                data-setup='{ "asdf": true }'
+                                                data-setup='{ "playbackRates": [0.5, 0.75, 1, 1.25, 1.44,  1.5, 1.75, 2] }'>
+                                                <source
+                                                    src="https://player.vimeo.com/external/324803554.hd.mp4?s=242ebea7537de4f6432cb6b7cda4b969800b8724&profile_id=174"
+                                                    type="video/mp4">
+                                            </video>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                    <!-- end panel -->
+                </div>
+                <!-- end videos -->
             </div>
+            <!-- end row -->
         </div>
         <!-- begin theme-panel -->
         <div class="theme-panel theme-panel-lg">
@@ -779,12 +720,30 @@
                             data-title="Black">&nbsp;</a></li>
                 </ul>
                 <div class="divider"></div>
+                <h5 class="m-t-0">Background Color</h5>
+                <ul class="theme-list clearfix">
+                    <li><a href="javascript:;" class="bg-red" data-theme="red">&nbsp;</a>
+                    </li>
+                    <li><a href="javascript:;" class="bg-pink" data-theme="pink">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-orange" data-theme="orange">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-yellow" data-theme="yellow">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-lime" data-theme="lime">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-green" data-theme="green">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-teal" data-theme="default">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-aqua" data-theme="aqua">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-blue" data-theme="blue">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-purple" data-theme="purple">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-indigo" data-theme="indigo">&nbsp;</a></li>
+                    <li><a href="javascript:;" class="bg-black" data-theme="black">&nbsp;</a>
+                    </li>
+                </ul>
+                <div class="divider"></div>
                 <div class="row m-t-10">
                     <div class="col-md-6 control-label text-inverse f-w-600">Header Styling</div>
                     <div class="col-md-6">
                         <select name="header-styling" class="form-control form-control-sm">
-                            <option value="1">default</option>
                             <option value="2">inverse</option>
+                            <option value="1">default</option>
                         </select>
                     </div>
                 </div>
@@ -824,7 +783,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="row m-t-10">
+                <!-- <div class="row m-t-10">
                     <div class="col-md-6 control-label text-inverse f-w-600">Content Styling</div>
                     <div class="col-md-6">
                         <select name="content-styling" class="form-control form-control-sm">
@@ -832,7 +791,7 @@
                             <option value="2">black</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
                 <div class="row m-t-10">
                     <div class="col-md-6 control-label text-inverse f-w-600">Direction</div>
                     <div class="col-md-6">
@@ -842,29 +801,37 @@
                         </select>
                     </div>
                 </div>
+                <div class="row m-t-10">
+                    <div class="col-md-6 control-label text-inverse f-w-600">Page Background</div>
+                    <div class="col-md-6">
+                        <select name="pageBg" class="form-control form-control-sm mt-3">
+                            <option value="0">Default</option>
+                            <option value="1">Gray-Wood</option>
+                            <option value="2">Maple-Wood</option>
+                            <option value="3">Brown-Wood</option>
+                            <option value="4">Blue-Texture</option>
+                            <option value="5">Gray-Texture</option>
+                            <option value="6">IDK-Texture</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="divider"></div>
-                <h5>THEME VERSION</h5>
-                <div class="theme-version">
-                    <a href="template_html/index_v2.html" class="active">
-                        <span style="background-image: url(assets/img/theme/default.jpg);"></span>
-                    </a>
-                    <a href="template_transparent/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/transparent.jpg);"></span>
-                    </a>
-                </div>
-                <div class="theme-version">
-                    <a href="template_apple/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/apple.jpg);"></span>
-                    </a>
-                    <a href="template_material/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/material.jpg);"></span>
-                    </a>
-                </div>
-                <div class="theme-version">
-                    <a href="template_facebook/index_v2.html">
-                        <span style="background-image: url(assets/img/theme/facebook.jpg);"></span>
-                    </a>
-                </div>
+                <style>
+                    .toggle.ios,
+                    .toggle-on.ios,
+                    .toggle-off.ios {
+                        border-radius: 20rem;
+                    }
+
+                    .toggle.ios .toggle-handle {
+                        border-radius: 20rem;
+                    }
+                </style>
+                <h5>Reading Mode &nbsp;&nbsp;&nbsp;
+                    <input id="readingMode" type="checkbox" checked data-toggle="toggle" data-on="Dark" data-off="Light"
+                        data-onstyle="dark" data-offstyle="light" data-style="ios">
+                </h5>
+
                 <div class="divider"></div>
                 <div class="row m-t-10">
                     <div class="col-md-12">
@@ -898,11 +865,90 @@
     <script src="assets/js/apps.min.js"></script>
     <script src="assets/js/disable.js"></script>
     <script src="assets/plugins/bootstrap-select/bootstrap-select.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
     <!-- ================== END BASE JS ================== -->
 
     <script>
         $(document).ready(function () {
             App.init();
+        });
+    </script>
+    <!-- for image change white/black -->
+    <script>
+        $(function () {
+            src = $(".qimgs").attr("src");
+            // alert(src)
+            $("#readingMode").change(function (e) {
+                e.preventDefault();
+                if (src.includes("black")) {
+                    src = src.replace(/black/g, "white")
+                    $(".qimgs").attr("src", "" + src);
+                } else {
+                    src = src.replace(/white/g, "black")
+                    $(".qimgs").attr("src", "" + src);
+                }
+            });
+        });
+    </script>
+    <!-- for page Background -->
+    <script>
+        $(function () {
+            $("select[name='pageBg']").on('change', function () {
+                // alert()
+                val = $(this).val();
+                // alert(val)
+                if (val == 1) {
+                    $("body").css("background", "url(assets/img/page-bg/gray-wood.jpg)");
+                } else if (val == 2) {
+                    $("body").css("background", "url(assets/img/page-bg/maple-wood.jpg)");
+                } else if (val == 3) {
+                    $("body").css("background", "url(assets/img/page-bg/brown-wood.jpg)");
+                } else if (val == 4) {
+                    $("body").css("background", "url(assets/img/page-bg/blue-texture.jpg)");
+                } else if (val == 5) {
+                    $("body").css("background", "url(assets/img/page-bg/gray-texture.jpg)");
+                } else if (val == 6) {
+                    $("body").css("background", "url(assets/img/page-bg/vertical-wood.jpg)");
+                }
+            });
+        });
+    </script>
+    <!-- for slimscroll theme-panel and body -->
+    <script>
+        $(function () {
+            $(".theme-panel-content").slimscroll({
+                height: '100vh',
+                color: '#455A64',
+                distance: '0',
+                allowPageScroll: true,
+                alwaysVisible: true
+            })
+        });
+    </script>
+    <!-- for prev / next button activation -->
+    <script>
+        $(function () {
+            contentCount = 0;
+            $(".nextbtn").click(function (e) {
+                e.preventDefault();
+                contentCount = contentCount + 1;
+                alert(contentCount)
+                topPos = $($(".content")[contentCount]).position().top;
+                $('html, body').animate({
+                    scrollTop: topPos + "px"
+                }, 800);
+            });
+
+            $(".prevbtn").click(function (e) {
+                e.preventDefault();
+                contentCount = contentCount - 1;
+                alert(contentCount)
+                topPos = $($(".content")[contentCount]).position().top;
+                $('html, body').animate({
+                    scrollTop: topPos + "px"
+                }, 800);
+
+            });
         });
     </script>
 </body>
