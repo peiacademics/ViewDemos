@@ -31,7 +31,7 @@ html {
 }
 
 body {
-    background: #d9e0e7;
+    /* background: #d9e0e7; */
     font-size: .8rem;
     font-family: 'Open Sans',sans-serif;
     color: #707478;
@@ -16822,3 +16822,25 @@ a.text-green:hover {
 .bg-deepspace{
     background: linear-gradient(to right, #000000 ,#434343) !important;
 }
+.bg-lunada{
+    background: linear-gradient(to right, #5433ff ,#20bdff,#a5fecb) !important;
+}
+.bg-gray-wood{
+    background-image: url(../../img/page-bg/gray-wood.jpg) !important;
+}
+.bg-maple-wood{
+    background-image: url(../../img/page-bg/maple-wood.png) !important;
+}
+.bg-brown-wood{
+    background-image: url(../../img/page-bg/brown-wood.jpg) !important;
+}
+.bg-teal-texture{
+    background-image: url(../../img/page-bg/teal.jpg) !important;
+}
+.bg-blue-texture{
+    background-image: url(../../img/page-bg/blue-texture.jpg) !important;
+}
+.bg-black-texture{
+    background-image: url(../../img/page-bg/vertical-wood.png) !important;
+}
+
