@@ -572,7 +572,8 @@ table.dataTable thead .sorting_desc_disabled:after {
 }
 
 .fade .navbar-form .form-control {
-    -webkit-animation: none
+    -webkit-animation: none;
+    animation:none;
 }
 
 .header .navbar-user .image {
@@ -2147,7 +2148,7 @@ table.dataTable thead .sorting_desc_disabled:after {
 
 .form-control.input-inline {
     display: inline;
-    width: auto;
+    /* width: auto; */
     padding: 0 7px
 }
 
@@ -9122,25 +9123,6 @@ body .bootstrap-datetimepicker-widget .timepicker-picker table td:first-child {
     height: 28px;
     border-radius: 28px
 }
-
-/* My PageBG Changes */
-.theme-panel.theme-panel-lg .bgtheme-list>li>a {
-    width: 28px;
-    height: 28px;
-    border-radius: 28px;
-    border-radius: 14px;
-    display: block;
-    transition: all .2s linear;
-    text-decoration: none;
-    list-style: none;
-    /* border:1px solid red; */
-}
-.theme-panel .bgtheme-list>li {
-    float: left;
-    margin-right: 3px;
-    margin-bottom: 3px
-}
-/* end */
 .theme-panel.theme-panel-lg .theme-list>li.active>a:before {
     line-height: 28px
 }
@@ -9811,7 +9793,8 @@ a.inverse-mode.widget-list-item {
 .error-code,
 .error-content,
 .map {
-    -webkit-transform: translateZ(0)
+    -webkit-transform: translateZ(0);
+    transform:translateZ(0);
 }
 
 .widget-chat .widget-chat-message:after {
@@ -11171,7 +11154,7 @@ a.inverse-mode.widget-card {
     height: 0;
     display: block;
     margin: 0 auto 5px;
-    vertical-align: middle;
+    /* vertical-align: middle; */
     border-radius: 8px
 }
 
@@ -15548,6 +15531,7 @@ a.text-green:hover {
 
 .text-gradient {
     -webkit-background-clip: text !important;
+    background-clip: text !important;
     -webkit-text-fill-color: transparent !important
 }
 
@@ -16792,4 +16776,49 @@ a.text-green:hover {
 .rtl-mode .widget-todolist-item .widget-todolist-input+div {
     padding-left: 15px;
     padding-right: 0
+}
+/* style by Tj */
+.theme-panel.theme-panel-lg .bgtheme-list>li>a {
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    border-radius: 14px;
+    display: block;
+    transition: all .2s linear;
+    text-decoration: none;
+    list-style: none;
+    /* border:1px solid red; */
+}
+.theme-panel .bgtheme-list>li {
+    float: left;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    cursor:pointer
+}
+.theme-panel .bgtheme-list>li.active>a::before {
+    content:'\2713';
+    display:inline-block;
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
+    left:20%;
+    top:0px;
+    color:#fff;
+    opacity: .5;
+    padding:0 6px 0 0;
+}
+.bg-default{
+    background: #d9e0e7;
+}
+.bg-rainbowblue{
+    background: linear-gradient(to right, #00f260 ,#0575e6) !important;
+}
+.bg-sunset{
+    background: linear-gradient(to right, #ee0979 ,#ff6a00) !important;
+}
+.bg-purpink{
+    background: linear-gradient(to right, #7f00ff ,#e100ff) !important;
+}
+.bg-deepspace{
+    background: linear-gradient(to right, #000000 ,#434343) !important;
 }
