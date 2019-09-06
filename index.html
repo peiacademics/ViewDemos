@@ -995,6 +995,15 @@
             App.init();
         });
     </script>
+    <!-- Toggle SideBar -->
+    <script>
+        $(".sideToggle").click(function (e) {
+            e.preventDefault();
+            $(".sidebar").toggle();
+            $(".sidebar-bg").toggle();
+            $(".content").toggleClass("w-100 ml-0");
+        });
+    </script>
     <!-- for slimscroll theme-panel and body -->
     <script>
         $(function () {
@@ -1029,8 +1038,7 @@
 
             $(".prevbtn").click(function (e) {
                 e.preventDefault();
-                if (contentCount == 1) 
-                {
+                if (contentCount == 1) {
                     contentCount = contentCount - 1;
                     // alert(contentCount)
                     topPos = $($(".content")[contentCount]).position().top;
@@ -1042,8 +1050,7 @@
                     });
                     contentCount = 1
                 }
-                else
-                {
+                else {
                     contentCount = contentCount - 1;
                     // alert(contentCount)
                     topPos = $($(".content")[contentCount]).position().top;

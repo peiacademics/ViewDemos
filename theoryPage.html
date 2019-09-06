@@ -653,6 +653,15 @@
             App.init();
         });
     </script>
+    <!-- Toggle SideBar -->
+    <script>
+        $(".sideToggle").click(function (e) {
+            e.preventDefault();
+            $(".sidebar").toggle();
+            $(".sidebar-bg").toggle();
+            $(".content").toggleClass("w-100 ml-0");
+        });
+    </script>
     <!-- for image change white/black -->
     <script>
         $(function () {
