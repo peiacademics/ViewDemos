@@ -1024,17 +1024,17 @@
 
     <script>
         $(function () {
-            var vid = $("video")[0];
-            function skipTime(time) {
-                vid.play();
-                vid.pause();
-                vid.currentTime = time;
-                vid.play();
-            };
+
             TimeStamp = 0
             VideoNo = 0
             $("video").on("play", function () {
-                alert(VideoNo)
+                var vid = $(this)[0];
+                function skipTime(time) {
+                    vid.play();
+                    vid.pause();
+                    vid.currentTime = time;
+                    vid.play();
+                };
                 $(this).parent().append(`
                 <div class="timeStamp text-light font-weight-bold" aria-expanded="false">
                     <i class="fa fa-bars fa-2x"></i>
