@@ -1034,6 +1034,7 @@
             TimeStamp = 0
             VideoNo = 0
             $("video").on("play", function () {
+                alert(VideoNo)
                 $(this).parent().append(`
                 <div class="timeStamp text-light font-weight-bold" aria-expanded="false">
                     <i class="fa fa-bars fa-2x"></i>
