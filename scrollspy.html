@@ -31,7 +31,7 @@
     <script src="assets/plugins/pace/pace.min.js"></script>
     <!-- ================== END BASE JS ================== -->
     <link href="src/video-js.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="assets/plugins/waves/waves.css">
     <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
     <script src="src/videojs-ie8.min.js"></script>
 
@@ -330,6 +330,13 @@
         <!-- end #sidebar -->
         <!-- begin #content -->
         <div class="content" id="content">
+            <div class="row mb-2">
+                <button class="btn btn-primary">Some Button here</button>
+                <button class="btn btn-default">Some Button here</button>
+                <button class="btn btn-danger">Some Button here</button>
+                <button class="btn btn-success">Some Button here</button>
+                <button class="btn btn-warning">Some Button here</button>
+            </div>
             <div class="row">
                 <div id="list-example" class="list-group col-lg-2">
                     <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
@@ -555,7 +562,12 @@
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
     <script src="assets/js/pageBg&readMode.js"></script>
     <!-- ================== END BASE JS ================== -->
-
+    <script src="assets/plugins/waves/waves.js"></script>
+    <script type="text/javascript">
+        Waves.attach('.btn');
+        // Waves.attach('.btn',['waves-button', 'waves-float']);
+        Waves.init();
+    </script> 
     <script>
         $(document).ready(function () {
             App.init();
