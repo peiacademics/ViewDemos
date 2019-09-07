@@ -86,3 +86,6 @@ Website: http://www.seantheme.com/color-admin-v4.3/admin/
 	background: #90ca4b !important;
 	color: white;
 }
+.QHeader{
+	background-image: linear-gradient(to right, #00f260 ,#0575e6) !important;
+}
